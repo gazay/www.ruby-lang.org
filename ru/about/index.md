@@ -59,31 +59,31 @@ Ruby также [абсолютно открыт]({{ site.license.url }}). От�
 чем Python."<sup>[3](#fn3)</sup>.”
 
 В Ruby всё – объект. Для каждой частицы информации или кода могут быть
-определены собственные свойства и действия.
- Object-oriented programming
-calls properties by the name *instance variables* and actions are known
-as *methods*. Ruby’s pure object-oriented approach is most commonly
-demonstrated by a bit of code which applies an action to a number.
+определены собственные свойства и действия. В объектно-ориентированном
+программировании свойства называются *переменными объекта*, а действия –
+*методами*. Чистейший объектно-ориентированный подход Ruby может быть
+продемонстрирован парой строк кода, в которых производится действие над
+числом.
 
 {% highlight ruby %}
-5.times { print "We *love* Ruby -- it's outrageous!" }
+5.times { print "Мы любим Ruby! Ruby – это замечательно!" }
 {% endhighlight %}
 
-In many languages, numbers and other primitive types are not objects.
-Ruby follows the influence of the Smalltalk language by giving methods
-and instance variables to all of its types. This eases one’s use of
-Ruby, since rules applying to objects apply to all of Ruby.
+Во многих языках числа и другие примитивные типы данных не являются
+объектами. Ruby под влиянием языка Smalltalk позволяет задать методы и
+переменные объекта всем типам данных. Это упрощает использование Ruby,
+так как правила применимые к объектам – применимы ко всему Ruby.
 
-### Ruby’s Flexibility
+### Гибкость Ruby
 
-Ruby is seen as a flexible language, since it allows its users to freely
-alter its parts. Essential parts of Ruby can be removed or redefined, at
-will. Existing parts can be added upon. Ruby tries not to restrict the
-coder.
+Ruby очень гибкий язык, так как он позволяет его пользователям свободно
+менять его части. Основные части Ruby могут быть удалены или
+переопределены по желанию. А к существующие части можно модифицировать.
+Ruby старается ни в чём не ограничивать пользователя.
 
-For example, addition is performed with the plus (`+`) operator. But, if
-you’d rather use the readable word `plus`, you could add such a method
-to Ruby’s builtin `Numeric` class.
+Например, сложение выполняется операцией плюс (`+`). Но, если вы хотите
+использовать для этого более читаемое слово `plus` – вы можете добавить
+такой метод прямо в `Numeric`, внутренний класс языка Ruby.
 
 {% highlight ruby %}
 class Numeric
@@ -93,22 +93,23 @@ class Numeric
 end
 
 y = 5.plus 6
-# y is now equal to 11
+# y теперь равно 11
 {% endhighlight %}
 
-Ruby’s operators are syntactic sugar for methods. You can redefine them
-as well.
+Операторы в Ruby – синтаксический сахар для методов. Вы также можете
+переопределить их.
 
-### Blocks, a Truly Expressive Feature
+### Блоки, По-настоящему Выразительная Конструкция
 
-Ruby’s block are also seen as a source of great flexibility. A
-programmer can attach a closure to any method, describing how that
-method should act. The closure is called a *block* and has become one of
-the most popular features for newcomers to Ruby from other imperative
-languages like PHP or Visual Basic.
+Блоки в Ruby также являются отличным источником гибкости. Программист
+может добавить замыкание к любому методу, описывая, как этот метод
+должен действовать. Замыкание называется *блок* и является одной из
+наиболее популярных конструкций для пришедших в мир Ruby из мира императивных
+языков программирования, таких как PHP или Visual Basic.
 
-Blocks are inspired by functional languages. Matz said, “in Ruby
-closures, I wanted to respect the Lisp culture<sup>[4](#fn4)</sup>.”
+Создание блоков было вдохновлено функциональными языками
+программирования. Matz говорил, "замыканиями в руби я хотел отдать дань
+уважения культуре языка Lisp<sup>[4]($fn4)</sup>."
 
 {% highlight ruby %}
 search_engines =
@@ -117,21 +118,22 @@ search_engines =
   end
 {% endhighlight %}
 
-In the above code, the block is described inside the `do ... end`
-construct. The `map` method applies the block to the provided list of
-words. Many other methods in Ruby leave a hole open for a coder to write
-their own block to fill in the details of what that method should do.
+В коде выше блок описан внутри конструкции `do ... end`.
+Метод `map` применяет блок кода к представленному списку слов. Многие
+другие методы в Ruby оставляют путь, открытый для программиста, чтобы
+тот написал собственный блок кода, детально говорящий методу, что тот
+должен сделать.
 
-### Ruby and the Mixin
+### Ruby и Примеси
 
-Unlike many object-oriented languages, Ruby features single inheritance
-only, **on purpose**. But Ruby knows the concept of modules (called
-Categories in Objective-C). Modules are collections of methods.
+В отличие от многих объектно-ориентированных языков, Ruby **намеренно** предоставляет
+лишь одиночное наследование. Но Ruby также предоставляет концепцию модулей
+(называемых Категориями в Objective-C). Модули – это коллекции методов.
 
-Classes can mixin a module and receive all its methods for free. For
-example, any class which implements the `each` method can mixin the
-`Enumerable` module, which adds a pile of methods that use `each` for
-looping.
+Классы могут свободно вмешивать модуль и получать все его методы.
+Например, любой класс, который реализует метод `each`, может подмешать
+модуль `Enumerable`, который добавит кучу методов использующих `each`
+для создания циклов.
 
 {% highlight ruby %}
 class MyArray
@@ -139,70 +141,76 @@ class MyArray
 end
 {% endhighlight %}
 
-Generally, Rubyists see this as a much clearer way than multiple
-inheritance, which is complex and can be too restrictive.
+В основном, рубисты находят это более прозрачным, нежели множественное
+наследование, которое может быть довольно сложным и иметь какие-либо
+ограничения.
 
-### Ruby’s Visual Appearance
+### Визуальное Представление Ruby
 
-While Ruby often uses very limited punctuation and usually prefers
-English keywords, some punctuation is used to decorate Ruby. Ruby needs
-no variable declarations. It uses simple naming conventions to denote
-the scope of variables.
+Так как в Ruby зачастую пунктуация встречается довольно редко и обычно
+используются английские слова в качестве ключевых, некоторые знаки
+препинания используются для украшения Ruby. Ruby не нуждается в
+объявлении переменных. В нем используются простые конвенции именования,
+для того чтобы разделить области видимости переменных.
 
-* `var` could be a local variable.
-* `@var` is an instance variable.
-* `$var` is a global variable.
+* `var` может быть локальной переменной.
+* `@var` переменная объекта.
+* `$var` глобальная переменная.
 
-These sigils enhance readability by allowing the programmer to easily
-identify the roles of each variable. It also becomes unnecessary to use
-a tiresome `self.` prepended to every instance member.
+Данная символика повышает читабельность, позволяя программисту легко
+идентифицировать роль каждой переменной. Это также позволяет не
+использовать утомительное `self.` для каждого объекта.
 
-### Beyond the Basics
+### Помимо Основ
 
-Ruby has a wealth of other features, among which are the following:
+Ruby полон другими особенностями и конструкциями, и вот некоторые из них:
 
-* Ruby has exception handling features, like Java or Python, to make it
-  easy to handle errors.
+* В Ruby есть конструкции для обработки исключений, как в Java или Python,
+  которые позволяют проще работать с ошибками.
 ^
 
-* Ruby features a true mark-and-sweep garbage collector for all Ruby
-  objects. No need to maintain reference counts in extension libraries.
-  As Matz says, “This is better for your health.”
+* В Ruby представлен настоящий mark-and-sweep (пометь и отчисти) сборщик
+  мусора для всех Ruby объектов. Не нужно вручную отслеживать количество
+  ссылок в сторонних библиотеках. Как говорит Matz, "Это полезней для
+  вашего здоровья."
 ^
 
-* Writing C extensions in Ruby is easier than in Perl or Python, with a
-  very elegant API for calling Ruby from C. This includes calls for
-  embedding Ruby in software, for use as a scripting language. A SWIG
-  interface is also available.
+* Писать расширения на C в Ruby проще чем в Perl или Python при помощи
+  очень элегантного API для вызова Ruby из C. Он включает в себя вызовы
+  для встраивания Ruby в программное обеспечение, чтобы использовать его
+  как скриптовый язык. Также доступен интерфейс SWIG.
 ^
 
-* Ruby can load extension libraries dynamically if an OS allows.
+* Ruby может подгружать сторонние библиотеки динамически, если позволяет
+  операционная система.
 ^
 
-* Ruby features OS independent threading. Thus, for all platforms on
-  which Ruby runs, you also have multithreading, regardless of if the OS
-  supports it or not, even on MS-DOS!
+* В Ruby реализованы независимые от операционной системы потоки.
+  Таким образом, на любых платформах, где вы запускаете Ruby, вы также
+  имеете возможность использовать многопоточность, не зависимо от того,
+  поддерживает ли данная система потоки или нет. Вы можете использовать
+  возможности многопоточности даже в MS-DOS!
 ^
 
-* Ruby is highly portable: it is developed mostly on GNU/Linux, but
-  works on many types of UNIX, Mac OS X, Windows 95/98/Me/NT/2000/XP,
-  DOS, BeOS, OS/2, etc.
+* Ruby отличается высокой переносимостью: он был разработан большей
+  частью на GNU/Linux, но работает на многих типах UNIX, Mac OS X,
+  Windows 95/98/Me/NT/2000/XP/Vista/8, DOS, BeOS, OS/2, и так далее.
 
-#### References
+#### Ссылки
 
-<sup>1</sup> Matz, speaking on the Ruby-Talk mailing list, [May 12th,
-2000][2].
+<sup>1</sup> Matz, сообщение в списке рассылок Ruby-Talk, [12 мая
+2000 года][2].
 {: #fn1}
 
-<sup>2</sup> See the [Ruby on Rails][3] home page for more.
+<sup>2</sup> Дополнительная информация на домашней странице [Ruby on Rails][3].
 {: #fn2}
 
-<sup>3</sup> Matz, in [An Interview with the Creator of Ruby][4], Nov.
-29th, 2001.
+<sup>3</sup> Matz, в [Интервью с Создателем Ruby][4], 29 ноября 2001
+года.
 {: #fn3}
 
-<sup>4</sup> Matz, in [Blocks and Closures in Ruby][5], December 22nd,
-2003.
+<sup>4</sup> Matz, в [Блоки и Замыкания в Ruby][5], 22 декабря 2003
+года.
 {: #fn4}
 
 
