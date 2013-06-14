@@ -1,68 +1,67 @@
 ---
 layout: page
-title: "Ruby Conferences"
+title: "Ruby конференции"
 lang: en
 ---
 
-Ruby programmers around the world are getting involved in more and more
-conferences, where they get together to share reports on
-work-in-progress, discuss the future of Ruby, and welcome newcomers to
-the Ruby community.
+Программисты Ruby по всему миру посещают все больше и больше
+конференций, где они делятся друг с другом о текущей работе, обсуждают
+будущее Ruby и приветствуют новичков в сообществе Ruby.
 
-### Major Ruby Conferences
+### Основные конференции о Ruby
 
 [RubyConf][1]
-: Every year since 2001, [Ruby Central, Inc.][2] has produced RubyConf,
-  the International Ruby conference. Attendance grew by a factor of ten
-  between 2001 and 2006. RubyConf has provided a forum for presentations
-  about Ruby technologies by their creators, including talks by
-  Nathaniel Talbot on Test Unit, Jim Weirich on Rake, David Heinemeier
-  Hansson on Ruby on Rails, Why the Lucky Stiff on the YAML library, and
-  Sasada Koichi on YARV. Matz has attended, and spoken at, all the
-  RubyConfs but one.
+: Каждый год, начиная с 2001, [Ruby Central, Inc.][2] проводит RubyConf,
+  интернациональную Ruby конференцию. Количество участников росло по
+  факториалу от десяти с 2001 по 2006 год. RubyConf предоставляет форум
+  для докладов о Ruby технологиях от их создателей, включая доклады от
+  Nathaniel Talbot про Test Unit, Jim Weirich про Rake, David Heinemeier
+  Hansson про Ruby on Rails, Why the Lucky Stiff про YAML библиотеку и
+  Sasada Koichi про YARV. Matz участвовал и выступал на всех конференциях,
+  кроме одной.
 
 [RubyKaigi][3]
-: The first Japanese Ruby conference, RubyKaigi 2006, took place in
-  Odaiba. RubyKaigi provides many new and exciting talks by Matz and
-  other Rubyists in every year.
+: Первая японская Ruby конференция, RubyKaigi 2006, была проведена в
+  Odaiba. RubyKaigi предоставляет много новых захватывающих докладов от
+  Matz'а и других рубистов каджый год.
 
 [EuRuKo <small>(Europaeische Ruby Konferenz)</small>][4]
-: The first annual European Ruby Conference (EuRuKo) was held in
-  Karlsruhe, Germany, in 2003. Organized by a team of German Rubyists
-  including Armin Roehrl and Michael Neumann, EuRuKo emerged as the
-  second annual Ruby event, starting two years after RubyConf.
+: Первая ежегодная европейская Ruby конференция (EuRuKo) была в Karlsruhe,
+  Германия, в 2003 году. Организованная командой немецких рубистов, включая
+  Armin Roehrl и Michael Neumann, EuRuKo является вторым ежегодным Ruby
+  событием после стартовавшей за два года до этого RubyConf.
 
 [Open Source Developer Conference][5]
-: This is an annual open source development conference that is held each
-  year in Australia. While not specifically a Ruby conference, each year
-  we do get a number of Ruby papers and we are always interested in more
-  Ruby content.
+: Ежегодная конференция разработчиков open source проходит в Австралии.
+  Несмотря на то, что это не специфическая Ruby конференция, каждый год мы
+  получаем оттуда несколько работ о Ruby.
 
-### Regional Ruby Conferences
+### Региональные Ruby конференции
 
-[Ruby Central][2] administers a [Regional Conference Grant Program][6],
-to offset expenses for local and regional groups wanting to organize
-events.
+[Ruby Central][2] руководит программой [Regional Conference Grant Program][6],
+чтобы уменьшить затраты местных и региональных групп в организации
+событий.
 
-Ruby Central has also teamed up with [SDForum][7] to produce the Silicon
-Valley Ruby Conference, entering its second year in 2007.
 
-[RubyNation][8] is an annual Ruby conference serving the Virginia, West
-Virginia, Maryland, and Washington, DC areas.
+Ruby Central также сотрудничает с [SDForum][7], чтобы организовать Silicon
+Valley Ruby Conference, участвуя в этом со второй такой конференции в 2007
+году.
 
-WindyCityRails is an annual gathering for all who are passionate about
-Ruby on Rails. The Chicago-based conference has served the Ruby
-community since 2008. Visit [http://windycityrails.org][9] for details.
+[RubyNation][8] ежегодная Ruby конференция, проводимая в Virginia, West
+Virginia, Maryland, и Washington, округ Колумбия.
 
-### Ruby At Other Conferences
+WindyCityRails является ежегодной конференцией для всех, кто обожает
+Ruby on Rails. Событие проводится в Chicago сообществом Ruby начиная с
+2008 года. Зайдите на [http://windycityrails.org][9] за подробностями.
 
-There has been a Ruby track at the [O’Reilly Open Source Conference][10]
-(OSCON) since 2004, and an increasing presence on the part of Ruby and
-Rubyists at other non-Ruby-specific gatherings. A number of conferences
-have also been devoted to [Ruby on Rails][11], including Ruby Central’s
-[RailsConf][12], [RailsConf Europe][13] (co-produced in 2006 by Ruby
-Central and [Skills Matter][14], and in 2007 by Ruby Central and
-O’Reilly), and Canada on Rails.
+### Ruby на других конференциях
+
+С 2004 года часть конференции [O’Reilly Open Source Conference][10]
+посвящена темам Ruby. Также количество рубистов и тем о Ruby растет на
+других не Ruby-специфичных событиях. Некоторые конференции, посвященные
+[Ruby on Rails][11]: [RailsConf][12] от Ruby Central, [RailsConf Europe][13] (Ruby
+Central и [Skills Matter][14] соучередители с 2006, и с 2007 года – Ruby Central и
+O’Reilly), и Canada on Rails.
 
 
 

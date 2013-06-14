@@ -1,65 +1,65 @@
 ---
 layout: page
-title: "Manual Mailing List Instructions"
-lang: en
+title: "Инструкция о подписке на рассылки вручную"
+lang: ru
 ---
 
-To subscribe to a mailing list, please send a plain text mail
-with the following mail body (not the subject) to the automated
-“controller” address:
+Для того, чтобы подписаться на почтовую рассылку, пожалуйста пришлите
+письмо со следующим содержимом (не темой) на адрес робота:
 
-    subscribe Your-First-Name Your-Last-Name
+    subscribe Ваше-Имя Ваша-Фамилия
 {: .code}
 
-e.g.
+например
 
-    subscribe John Doe
+    subscribe Alex Gaziev
 {: .code}
 
 Ruby-Talk
-: For the Ruby-Talk list, the controller address is
-  [ruby-talk-ctl@ruby-lang.org](mailto:ruby-talk-ctl@ruby-lang.org), the
-  posting address is
-  [ruby-talk@ruby-lang.org](mailto:ruby-talk@ruby-lang.org), and the
-  human administrator address is
+: Для рассылки Ruby-Talk, адрес робота на который нужно послать письмо
+  [ruby-talk-ctl@ruby-lang.org](mailto:ruby-talk-ctl@ruby-lang.org), для
+  размещения поста адрес
+  [ruby-talk@ruby-lang.org](mailto:ruby-talk@ruby-lang.org), и для связи
+  с администратором адрес
   [ruby-talk-admin@ruby-lang.org](mailto:ruby-talk-admin@ruby-lang.org).
 
 Ruby-Core
-: For the Ruby-Core list, the controller address is
-  [ruby-core-ctl@ruby-lang.org](mailto:ruby-core-ctl@ruby-lang.org), the
-  posting address is
-  [ruby-core@ruby-lang.org](mailto:ruby-core@ruby-lang.org), and the
-  “human” administrator address is
+: Для рассылки Ruby-Core, адрес робота на который нужно послать письмо
+  [ruby-core-ctl@ruby-lang.org](mailto:ruby-core-ctl@ruby-lang.org), для
+  размещения поста адрес
+  [ruby-core@ruby-lang.org](mailto:ruby-core@ruby-lang.org), и для связи
+  с администратором адрес
   [ruby-core-admin@ruby-lang.org](mailto:ruby-core-admin@ruby-lang.org).
 
 Ruby-Doc
-: For the Ruby-Doc list, the controller address is
-  [ruby-doc-ctl@ruby-lang.org](mailto:ruby-doc-ctl@ruby-lang.org), the
-  posting address is
-  [ruby-doc@ruby-lang.org](mailto:ruby-doc@ruby-lang.org), and the
-  “human” administrator address is
+: Для рассылки Ruby-Doc, адрес робота на который нужно послать письмо
+  [ruby-doc-ctl@ruby-lang.org](mailto:ruby-doc-ctl@ruby-lang.org), для
+  размещения поста адрес
+  [ruby-doc@ruby-lang.org](mailto:ruby-doc@ruby-lang.org), и для связи
+  с администратором адрес
   [ruby-doc-admin@ruby-lang.org](mailto:ruby-doc-admin@ruby-lang.org).
 
 Ruby-CVS
-: For the Ruby-CVS list, the controller address is
-  [ruby-cvs-ctl@ruby-lang.org](mailto:ruby-cvs-ctl@ruby-lang.org), the
-  posting address is
-  [ruby-cvs@ruby-lang.org](mailto:ruby-cvs@ruby-lang.org), and the
-  “human” administrator address is
+: Для рассылки Ruby-Doc, адрес робота на который нужно послать письмо
+  [ruby-cvs-ctl@ruby-lang.org](mailto:ruby-cvs-ctl@ruby-lang.org), для
+  размещения поста адрес
+  [ruby-cvs@ruby-lang.org](mailto:ruby-cvs@ruby-lang.org), и для связи
+  с администратором адрес
   [ruby-cvs-admin@ruby-lang.org](mailto:ruby-cvs-admin@ruby-lang.org).
 
-### Unsubscribing
+### Как отписаться
 
-To unsubscribe from a list, send a mail which body is “unsubscribe” to
-the **controller address**:
+Для того, чтобы отписаться от рассылки, пошлите письмо с содержимым
+"unsubscribe" на адрес робота:
 
     unsubscribe
 {: .code}
 
-Make sure to send a plain text mail, an HTML mail might not work.
+Убедитесь, что посылаете текстовое письмо, HTML письмо может не
+сработать.
 
-### Getting Help
+### Получить помощь
 
-To see the list of commands, send a mail which body is “help” to the
-controller address.
+Чтобы увидеть список команд, пошлите письмо с текстом "help" на адрес
+робота.
 

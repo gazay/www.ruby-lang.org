@@ -1,39 +1,39 @@
 ---
 layout: page
-title: "Mailing Lists"
-lang: en
+title: "Почтовая рассылка"
+lang: ru
 ---
 
-Mailing-lists are a great way to keep your finger on the pulse of the
-Ruby community. Ruby has four primary English speaking mailing lists:
+Почтовая рассылка – отличный способ держать руку на пульсе Ruby
+сообщества. Существует четыре основных англоговорящих почтовых рассылки:
 
 Ruby-Talk
-: This is the most popular mailing-list and deals with general topics
-  about Ruby. Ruby-Talk is mirrored by [Ruby-Forum.com][1]. ([FAQ][2]
-  and [Archives][3])
+: Это наиболее популярная почтовая рассылка, рассматривая основные
+  вопросы о Ruby. Ruby-Talk транслируется в [Ruby-Forum.com][1]. ([FAQ][2]
+  и [Архив][3])
 
 Ruby-Core
-: This list deals with core and implementation topics about Ruby, often
-  used to run patches for review. ([Archives][4])
+: Эта рассылка для обсуждения ядра и внутреннего устройства Ruby. Часто
+  используется для демонстрации патчей. ([Archives][4])
 
 Ruby-Doc
-: This list is for discussing documentation standards and tools for
-  Ruby. ([Archives at Gmane][5])
+: Данная рассылка служит для обсуждения инструментов и стандартов документации
+в Ruby. ([Archives at Gmane][5])
 
 Ruby-CVS
-: This list reports all commits to Ruby’s CVS repository.
+: Данная рассылка транслирует все коммиты в CVS репозиторий Ruby.
 
 The comp.lang.ruby Newsgroup
-: Those who prefer Usenet over mailing lists will want to checkout the
-  [comp.lang.ruby](news:comp.lang.ruby) newsgroup.
+: Те, кто предпочитает Usenet почтовой рассылке, возможно захотят
+взглянуть на [comp.lang.ruby](news:comp.lang.ruby) новостную группу.
 
 
-## Subscribe or Unsubscribe
+## Подписаться или не подписаться
 
 {% include subscription-form.html %}
 
-If you fail to receive a confirmation e-mail using the form, try
-subscribing the [manual way](manual-instructions/).
+Если вы не получили письма с подтверждением используя форму выше,
+попробуйте подписаться [вручную](manual-instructions/).
 
 
 

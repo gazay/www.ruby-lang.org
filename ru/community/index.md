@@ -1,57 +1,57 @@
 ---
 layout: page
-title: "Community"
-lang: en
+title: "Сообщество"
+lang: ru
 ---
 
-The community that grows up around a programming language is one of its
-most important strengths. Ruby has a vibrant and growing community that
-is friendly towards people of all skill levels.
+Сообщество, которое растет вокруг языка программирования, является одной
+из его наиболее важных сил. Сообщество Ruby, яркое и растущее,
+дружелюбно по отношению к людям всех уровней мастерства.
 
-If you are interested in getting involved, here are a couple of places
-to start:
+Если вам интересно влиться, здесь несколько мест для старта:
 
-[Ruby User Groups](user-groups/)
-: Your local Ruby user group is a great place to network with other Ruby
-  programmers. Ruby user groups are self-organizing and typically
-  feature monthly meetings, a mailing list, a Web site, and if you are
-  lucky, frequent codefests.
+[Группы пользователей Ruby](user-groups/)
+: Ваша местная группа пользователей Ruby – это отличное место для
+  знакомства с другими Ruby программистами. Группы пользователей Ruby
+  являются самоорганизованными и обычно состоят из ежемесячных встреч,
+  почтовой рассылки, веб-сайта и, если вам повезло, частых встреч для
+  совместной разработки.
 
-[Ruby Mailing Lists and Newsgroups](mailing-lists/)
-: Ruby has an assortment of lists on different topics and in several
-  languages. If you have questions about Ruby, asking them on a mailing
-  list is a great way to get answers.
+[Почтовые рассылки и новостные ленты Ruby](mailing-lists/)
+: В Ruby существует ассортимент списков посвященных различным темам на
+  разных языках мира. Если у вас есть вопосы о Ruby, задавание их в
+  почтовой рассылке является отличным способом получить ответы.
 
-[Ruby on IRC](irc://irc.freenode.net/ruby-lang)
-: The Ruby Language IRC Channel is a wonderful way to chat with fellow
-  Rubyists. ([Previous Chat Logs][1])
+[Ruby в IRC](irc://irc.freenode.net/ruby-lang)
+: Канал IRC о языке Ruby – это замечательный способ поговорить с
+  приятелями рубистами. ([Previous Chat Logs][1])
 
-[Ruby Core](ruby-core/)
-: Now is a fantastic time to follow Ruby’s development.
-  If you are interested in helping with Ruby, start here.
+[Ядро Ruby](ruby-core/)
+: Отличное время следовать разработке языка Ruby.
+  Если вы заинтересованы в помощи разработчикам Ruby, начните здесь.
 
-[Weblogs About Ruby](weblogs/)
-: Very little happens in the Ruby community that is not talked about on
-  the blogs. We’ve got a nice list of suggestions for you here for
-  getting plugged in.
+[Блоги о Ruby](weblogs/)
+: Очень мало чего случается в сообществе Ruby, о чем не говорят в
+  блогах. Здесь у нас неплохой список предложений для вас, чтобы
+  начать вливаться.
 
-[Ruby Conferences](conferences/)
-: Ruby programmers around the world are getting involved in more and
-  more conferences, where they get together to share reports on
-  work-in-progress, discuss the future of Ruby, and welcome newcomers to
-  the Ruby community.
+[Ruby конференции](conferences/)
+: Программисты Ruby по всему миру посещают все больше и больше
+  конференций, где они делятся друг с другом о текущей работе, обсуждают
+  будущее Ruby и приветствуют новичков в сообществе Ruby.
 
-[The Ruby Mentor Project][2]
-: This new resource aims to pair people new to Ruby with more
-  experienced guides. The goal is to ease the process of learning Ruby
-  by having someone you can ask questions from. This is intended to be a
-  little less intimidating than a mailing list, though Ruby Talk does
-  welcome questions from beginners.
+[Проект "Наставник в Ruby"][2]
+: Этот новый ресурс нацелен на парное программирование людей новых в
+  Ruby с более искусными разработчиками. Цель заключается в упрощении
+  процесса изучения Ruby посредством наличия человека, которому можно
+  задать вопросы. Ресурс выступает в роли менее устрашающего средства, чем
+  почтовые рассылки, несмотря на то, что Ruby Talk приветствует вопросы от
+  новичков.
 
-General Ruby Information
+Основная информация о Ruby
 : * [Ruby Central][3]
-  * [Ruby at Open Directory Project][4]
-  * [Rails at Open Directory Project][5]
+  * [Ruby на Open Directory Project][4]
+  * [Rails на Open Directory Project][5]
 
 
 
