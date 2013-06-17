@@ -1,41 +1,44 @@
 ---
 layout: page
-title: "User Groups"
-lang: en
+title: "Группы пользователей Ruby"
+lang: ru
 ---
 
-In the programming community, user groups form support networks for
-people interested in certain topics. They are a great place to increase
-your skills and network with other programmers. User groups are informal
-and their structure varies from group to group. Anyone can form their
-own group and set their own rules and schedule.
+В сообществе программистов, группы пользователей создаются для
+поддержки людей, заинтересованных в определенных темах. Это отличное
+место для того, чтобы улучшить ваши навыки и познакомиться с другими
+программистами. Группы пользователей являются неформальными
+организациями и их структуры варьируются от группы к группе. Любой может
+сформировать свою собственную группу и установить там определенные
+порядки и расписание.
 
-### Ruby User Groups
+### Группы пользователей Ruby
 
-If you want to get together with other Ruby programmers, a local user
-group may be just the thing. Ruby user groups are entirely devoted to
-Ruby. They typically feature monthly meetings, a mailing list, a website,
-and if you're lucky, frequent hacking sessions (meetings devoted
-to giving people a chance to write Ruby code).
+Если вы хотите пообщаться с другими Ruby программистами, местная группа
+пользователей может быть именно тем, что нужно. Группы пользователей
+Ruby целиком посвящены Ruby. Обычно они включают в себя ежемесячные
+встречи, почтовую рассылку, веб-сайт, и, если вам повезет, частые
+хак-сессии (встречи посвященные тому, чтобы писать Ruby код).
 
-Information about Ruby user groups can be found on various websites:
+Информацию о группах пользователей Ruby вы можете найти на различных
+веб-сайтах:
 
 [rubyusersgroups.org][1]
-: A public listing of Ruby groups throughout the world. Also allows
-  Rubyists to place themselves on a map of the world.
+: Публичный список групп пользователей Ruby во всем мире. Так же
+  позволяет рубистам отметиться на карте мира.
 
 [Ruby Meetup Groups][2]
-: A substantial number of Ruby User Groups have chosen to make Meetup
-  their home. Meetup provides a number of tools for user groups,
-  including: private forums, a place for announcements, automated
-  meeting reminders, and a nice RSVP system.
+: Некоторые из групп пользователей Ruby выбирают Meetup в качестве места их
+  встреч. Meetup предоставляет набор инструментов для групп пользователей,
+  таких как: приватные форму, место для объявлений, автоматические
+  напоминания о встречах и приятную RSVP систему.
 
-### Organizing Your Own Group
+### Создание своей группы
 
-If you are interested in forming your own group, be sure to find out if
-there is already a Ruby user group in your area. Larger meetings are
-usually much more fun, so starting your own group may not be the best
-option if there is already one nearby.
+Если вы заинтерисованы в формировании своей группы, будьте уверены что
+поблизости нет существующей группы пользователей. Большие встречи
+обычно намного веселей, так что создание своей группы возможно не лучшая
+идея, когда неподалеку уже существует еще одна.
 
 
 

@@ -1,148 +1,153 @@
 ---
 layout: page
 title: "Ruby Core"
-lang: en
+lang: ru
 ---
 
-Now is a fantastic time to follow Ruby’s development. With the increased
-attention Ruby has received in the past few years, there’s a growing need
-for good talent to help enhance Ruby and document its parts.
-So, where do you start?
+Сейчас отличное время, чтобы участвовать в разработке Ruby. С повышенным
+вниманием, которое получил Ruby в последние несколько лет, в сообществе
+возрастает потребность в талантах для улучшения Ruby самого по себе и
+его документации. Итак, где вам начать?
 
-The topics related to Ruby development covered here are:
+Темы, относящиеся к разработке Ruby, находятся здесь:
 
-* [Using Subversion to Track Ruby Development](#following-ruby)
-* [How to Use Git With the Main Ruby Repository](#git-ruby)
-* [Improving Ruby, Patch by Patch](#patching-ruby)
-* and, [Rules for Core Developers](#coding-standards)
+* [Использование Subversion для прослеживания процесса разработки Ruby](#following-ruby)
+* [Как использовать Git для работы с главным репозиторием Ruby](#git-ruby)
+* [Улучшаем Ruby, патч за патчем](#patching-ruby)
+* and, [Правила для разработчиков ядра](#coding-standards)
 
-### Using Subversion to Track Ruby Development
+### Использование Subversion для прослеживания разработки Ruby
 {: #following-ruby}
 
-Getting the latest Ruby source code is a matter of an anonymous checkout
-from the [Subversion][1] repository. From your command line:
+Анонимно получить последние исходники Ruby можно из [Subversion][1]
+репозитория. В командной строке наберите:
 
 {% highlight sh %}
 $ svn co http://svn.ruby-lang.org/repos/ruby/trunk ruby
 {% endhighlight %}
 
-The `ruby` directory will now contain the latest source code
-for the development version of Ruby (ruby-trunk).
-Currently patches applied to the trunk are backported to the
-stable 2.0.0 and 1.9.3 branches (see below).
+Папка `ruby` теперь будет содержать последние исходники
+development-версии Ruby (ruby-trunk). Патчи, применяемые к ruby-trunk
+так же портируются в стабильные ветки 2.0.0 и 1.9.3 (см. ниже).
 
-If you’d like to follow patching of Ruby 2.0.0, you should use the
-`ruby_2_0_0` branch when checking out:
+Если вы хотите следить за патчингом Ruby 2.0.0, вы можете переключится
+на `ruby_2_0_0` ветку:
 
 {% highlight sh %}
 $ svn co http://svn.ruby-lang.org/repos/ruby/branches/ruby_2_0_0
 {% endhighlight %}
 
-If you’d like to follow patching of Ruby 1.9.3, you should use the
-`ruby_1_9_3` branch when checking out:
+Если вы хотите следить за патчингом Ruby 1.9.3, вы можете переключится
+на `ruby_1_9_3` ветку:
 
 {% highlight sh %}
 $ svn co http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_9_3
 {% endhighlight %}
 
-This will check out the Ruby 1.9.3 development tree into a `ruby_1_9_3`
-directory. Developers working on Ruby 1.9.3 are expected to migrate their
-changes to Ruby’s trunk, so often the two branches are very similar,
-with the exception of improvements made by Matz and Nobu to the language
-itself.
+Данные команды скачают ветки Ruby 2.0.0 и 1.9.3 в папки `ruby_2_0_0` и
+`ruby_1_9_3` соответственно. Разработчики, работающие над 2.0.0 веткой,
+ожидают применения их изменений в ruby-trunk, так что зачастую обе ветки
+очень похожи, за исключением изменений, сделанных Matz'ем и Nobu в языке
+в целом.
 
-If you prefer, you may browse [Ruby’s Subversion repository via the web][2].
+Если вы предпочитаете, вы можете открыть [Subversion репозиторий Ruby в
+браузере][2].
 
-For information about Subversion, please see [the Subversion FAQ][3] and
-[the Subversion book][4]. Alternatively, you may find [Pragmatic Version
-Control with Subversion][5] to be a useful introductory book.
+Для информации по поводу Subversion, пожалуйста смотрите [the Subversion
+FAQ][3] и книгу [the Subversion book][4]. Еще вы можете найти полезной
+для начала изучения Subversion книгу [Pragmatic Version Control with Subversion][5].
 
-### How to Use Git With the Main Ruby Repository
+### Как использовать Git для работы с главным репозиторием Ruby
 {: #git-ruby}
 
-Those who prefer to use [Git][6] over Subversion can find instructions
-with [the mirror on GitHub][7], both for [those with commit access][8]
-and [everybody else][9].
+Для тех, кто предпочитает использовать [Git][6] вместо Subversion,
+инструкции могут найдены в [зеркале репозитария на GitHub][7]. Их две,
+одна для [тех, кто имеет право коммитить][8] и другая – для [всех
+остальных][9].
 
-### Improving Ruby, Patch by Patch
+### Улучшаем Ruby, патч за патчем
 {: #patching-ruby}
 
-The core team maintains an [issue tracker][10] for submitting patches and
-bug reports to Matz and the gang. These reports also get submitted to
-the [Ruby-Core mailing list](/en/community/mailing-lists/) for
-discussion, so you can be sure your request won’t go unnoticed. You can
-also send your patches straight to the mailing list. Either way, you are
-encouraged to take part in the discussion that ensues.
+Разработчики ядра поддерживают [специальный форум][10] для приема патчей
+и сообщений о багах для Matz'а и команды. Эти сообщения также попадают в
+[Ruby-Core mailing list](/en/community/mailing-lists/) для обсуждения,
+так что вы можете быть уверены, что ваше сообщение не останется без
+внимания. Вы также можете отправлять свои патчи прямиком в почтовую рассылку.
+В любом случае, вам предлагается принять участие в последующей
+дискуссии.
 
-Please look over the [Patch Writer’s Guide][11] for some tips, straight
-from Matz, on how to get your patches considered.
+Пожалуйста, посмотрите [Patch Writer's Guide][11]. Вы найдете там
+некоторые подсказки и приемы непосредственно от Matz'а о том, как
+сделать так, чтоб ваши патчи приняли.
 
-To summarize, the steps for building a patch are:
+Суммируя шаги создания патча:
 
-1.  Check out a copy of the Ruby source code from Subversion.
-    Usually patches for bugfixes or new features should be submitted
-    for the trunk of Ruby’s source. Even if you wish to add a feature
-    to Ruby 1.9.3, it has to be proven in the trunk first.
+1.  Скачайте копию исходного кода Ruby из Subversion. Обычно, патчи
+    которые исправляют баги или добавляют новые конструкции, должны быть
+    применены к trunk ветке исходного кода Ruby. Даже если вы хотите
+    добавить конструкцию к Ruby 1.9.3, это должно быть сначала проверено в
+    trunk.
 
         $ svn co http://svn.ruby-lang.org/repos/ruby/trunk ruby
 
-    If you are fixing a bug that is specific to only one maintenance branch,
-    check out a copy of the respective branch, e.g. `ruby_1_9.3`.
+    Если вы исправляете баг, который специфичен для одной из
+    поддерживаемых веток, выберите эту ветку, например, `ruby_1_9_3`.
 
         $ svn co http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_9_3
 
-2.  Add your improvements to the code.
+2.  Добавьте ваши улучшения в код.
 
-3.  Create a patch.
+3.  Создайте патч.
 
         $ svn diff > ruby-changes.patch
 
-4.  Create a ticket in the [issue tracker][10] or
-    email your patch to the [Ruby-Core mailing
-    list](/en/community/mailing-lists/) with a ChangeLog entry
-    describing the patch.
+4.  Создайте тикет в [специальном форуме][10] или вышлите свой патч в
+    рассылку [Ruby-Core mailing list](/en/community/mailing-lists/)
+    с записью в Changelog, описывающую ваши изменения.
 
-5.  If there are no issues raised about the patch, committers will be
-    given the approval to apply it.
+5.  Если с патчем не возникнет никаких проблем, программисты имеющие
+    права на добавление кода в репозитории, добавят ваш патч.
 
-**Please note:** patches should be submitted as a [unified diff][12].
-For more on how patches are merged, see [the diffutils reference][13].
+**Пожалуйста, обратите внимание:** что патчи должны быть предложены как
+[унифицированный дифф][12]. Для большей информации о том как применяют
+патчи, пожалуйста читайте [the diffutils reference][13].
 
-Discussion of Ruby’s development converges on the [Ruby-Core mailing
-list](/en/community/mailing-lists/). So, if you are curious
-about whether your patch is worthwhile or you want to spark a discussion
-about Ruby’s future, don’t hesitate to come aboard. Be warned that
-off-topic discussions are not tolerated on this list, the noise level
-should be very low, topics should be pointed, well-conceived and
-well-written. Since we’re addressing Ruby’s creator, let’s have some
-reverence.
+Обсуждение разработки Ruby происходит в почтовой рассылке [Ruby-Core mailing
+list](/en/community/mailing-lists/). Таким образом, если вы размышляете
+о том, будет ли ваш патч полезен, или вы хотите начать обсуждение о
+будущем Ruby, не медлите начать общение. Учтите также, что обсуждения не
+по теме не приветствуются в данной рассылке. Уровень шума должен быть
+низок, темы должны быть точными, продуманными и хорошо написанными. Так
+как рассылка приходит создателю Ruby, давайте будем вежливы.
 
-Keep in mind that Ruby’s core developers live in Japan and, while many
-speak very good English, there is a significant timezone difference.
-They also have an entire body of Japanese development lists happening
-alongside the English counterparts. Be patient, if your claim isn’t
-resolved, be persistent—give it another shot a few days later.
+Держите в уме, несмотря на то, что разработчики ядра Ruby большинством
+своим живут в Японии и многие из них владеют английским очень хорошо,
+присутствует значительная разница во времени. Разработчики ядра также
+имеют большое количество обсуждаемых на японском языке вещей, которые
+происходят параллельно с задачами, обсуждаемыми на английском. Будьте
+терпеливы и, если ваша проблема не решена, будьте настойчивы в следующей
+попытке через несколько дней.
 
-### Rules for Core Developers
+### Правила для разработчиков ядра
 {: #coding-standards}
 
-Generally, the developers of Ruby should be familiar with the source
-code and the style of development used by the team. To be clear, the
-following guidelines should be honored when checking into Subversion:
+Обычно, разработчики Ruby должны быть знакомы с исходным кодом и стилем
+разработки, используемым командой. Но на всякий случай, следующие
+правила должны уважаться, когда вы что-то изменяете:
 
-* All check-ins should be described in the `ChangeLog`, following the
-  [GNU conventions][14]. (Many Ruby core developers use Emacs `add-log`
-  mode, which can be accessed with the command `C-x 4 a`.)
-* Check-in dates should be given in Japan Standard Time (UTC+9).
-* The bulleted points from your ChangeLog should also be placed in the
-  Subversion commit message. This message will be automatically mailed
-  to the Ruby-CVS list after you commit.
-* Function prototypes are used throughout Ruby’s source code and its
-  packaged extensions.
-* Please, do not use C++-style comments (`//`), Ruby’s maintainers
-  instead prefer the standard C multi-line comment. (`/* .. */`)
+* Все добавления должны быть описаны в `ChangeLog` файле, следуя [GNU
+  конвенции][14]. (Многие разработчики ядра используют режим Emacs'а
+  `add-log`, который может быть включен командой `C-x 4 a`.)
+* Даты изменений должны быть представлены в формате Japan Standard Time
+  (UTC+9).
+* Буллиты из вашего ChangeLog должны также быть представлены в
+  комментарии к вашему коммиту в Subversion. Сообщение будет
+  автоматически выслано в рассылку Ruby-CVS после вашего коммита.
+* Прототипы функций используются в исходном коде Ruby и его расширениях.
+* Пожалуйста, не используйте C++ комментарии (`//`), разработчики ядра
+  предпочитают стиль многострочных комментариев C. (`/* .. */`)
 
-See also the information in [Ruby’s issue tracker][10].
+Также, для большей информации читайте [Ruby's issue tracker][10]
 
 
 
