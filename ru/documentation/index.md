@@ -1,132 +1,132 @@
 ---
 layout: page
-title: "Documentation"
-lang: en
+title: "Документация"
+lang: ru
 ---
 
-Here you will find pointers to manuals, tutorials and references that
-will come in handy when you feel like coding in Ruby.
+Здесь вы найдете отсылки к руководствам, урокам и ссылкам, которые могут
+быть полезны, если вы почувствуете, что хотите программировать на Ruby.
 
-### Getting Started
+### С чего начать
 
 [Try Ruby!][1]
-: An interactive tutorial that lets you try out Ruby right in your
-  browser. This 15-minute tutorial is aimed at beginners who want to get
-  a feeling of the language.
+: Интерактивное введение, которое даст вам возможность попробовать Ruby
+  прямо в вашем браузере. 15-ти минутная вводная часть нацелена на
+  начинающих, кто хочет почувствовать возможности языка.
 
 [Ruby Koans][2]
-: The Koans walk you along the path to enlightenment in order to learn
-  Ruby. The goal is to learn the Ruby language, syntax, structure, and
-  some common functions and libraries. We also teach you culture.
+: Данный ресурс поведет вас по пути просвящения к знаниям о Ruby. Цель
+  ресурса – изучить язык Ruby, его ситнаксис, структуру и несколько
+  стандартных функций и библиотек. Так же он обучит вас культуре.
 
 [RubyMonk][3]
-: Discover Ruby idioms, learn lessons and solve problems, all in your
-  browser!
+: Откройте для себя идиомы Ruby, пройдите урок и решите проблемы, все в
+  вашем браузере!
 
 [Hackety Hack][4]
-: <q cite="http://hackety-hack.com/">The little coder’s starter kit</q>.
-  A fun and easy way to learn about programming (through Ruby) using the
-  Shoes GUI Toolkit.
+: <q cite="http://hackety-hack.com/">Стартовый набор маленького
+  программиста</q>. Веселый и легкий путь обучения программированию (при
+  помощи Ruby), использует графическую среду разработки Shoes.
 
 [Why’s (Poignant) Guide to Ruby][5]
-: An unconventional but interesting book that will teach you Ruby
-  through stories, wit, and comics. Originally created by *why the lucky
-  stiff*, this guide remains a classic for Ruby learners.
+: Необычная, но интересная книга, которая научит вас Ruby посредством
+  историй, шуток и комиксов. Созданое программистом *why the lucky stiff*,
+  данное руководство является классикой для изучения Ruby.
 
 [Ruby in Twenty Minutes](/en/documentation/quickstart/)
-: A nice tutorial covering the basics of Ruby. From start to finish it
-  shouldn’t take you more than twenty minutes.
+: Неплохое введение, покрывающие основы Ruby. Прохождение его от начала
+  до конца не должно занять у вас более двадцати минут.
 
 [Ruby from Other Languages](/en/documentation/ruby-from-other-languages/)
-: Coming to Ruby from another language? Whether it’s C, C++, Java, Perl,
-  PHP, or Python, this article has you covered!
+: Пришли в мир Ruby из другого языка? Будь это C, C++, Java, Perl, PHP
+  или Python – этот раздел вам поможет!
 
 [Learning Ruby][6]
-: A thorough collection of Ruby study notes for those who are new to the
-  language and in search of a solid introduction to Ruby’s concepts and
-  constructs.
+: Учебник по Ruby для тех, кто только пришел в мир Ruby и ищет
+  полноценное введение в концепты и конструкции языка.
 
 [Ruby Essentials][7]
-: Ruby Essentials is a free on-line book designed to provide a concise
-  and easy to follow guide to learning Ruby.
+: Бесплатная онлайн-книга, предоставляющая краткое и легкое руководство
+  для изучения Ruby.
 
 [Learn to Program][8]
-: A wonderful little tutorial by Chris Pine for programming newbies. If
-  you don’t know how to program, start here.
+: Замечательное маленькое руководство от Chris Pine для новичков в
+  программировании. Если вы не знаете как программировать - начните
+  отсюда.
 
-### Manuals
+### Руководства
 
 [Programming Ruby][9]
-: The seminal work on Ruby in English, this first edition of the
-  [Pragmatic Programmers’ book][10] is available for free online.
+: Основополагающая работа по Ruby на английском в первом издании,
+[книга от Pragmatic Programmers][10], доступна бесплатно онлайн.
 
 [Ruby User’s Guide][11]
-: Translated from the original Japanese version written by Yukihiro
-  Matsumoto (the creator of Ruby), this version, by Goto Kentaro and
-  Mark Slagell is nice overview of many aspects of the Ruby language.
+: Переведенная с японского языка версия, написанная Yukihiro Matsumoto
+  (создатель Ruby), эта версия Goto Kentaro и Mark Slagell является
+  отличным обзором многих аспектов языка Ruby.
 
 [The Ruby Programming Wikibook][12]
-: A free online manual with beginner and intermediate content plus a
-  thorough language reference.
+: Бесплатное онлайн-руководство для начинающих и продвинутых, плюс
+  полная документация языка.
 
-### Reference Documentation
+### Документация языка
 
 [Ruby Core Reference][13]
-: Pulled straight from the source code using [RDoc][14], this reference
-  work documents all of the core classes and modules (like String,
-  Array, Symbol, etc…).
+: Полученная прямиком из исходного кода при помощи [RDoc][14], эта
+  документация охватывает все классы и модули ядра (такие как String,
+  Array, Symbol и так далее).
 
 [Ruby Standard Library Reference][15]
-: Also pulled from the source code using RDoc, this reference work
-  documents the standard library.
+: Так же полученная прямо из исходного кода при помощи RDoc, эта
+  документация охватывает стандартные библиотеки.
 
 [RubyDoc.info][16]
-: The one-stop web site for reference documentation about Ruby gems and
-  GitHub-hosted Ruby projects.
+: Веб-сайт содержащий в себе документацию о гемах Ruby и Ruby проектах,
+  расположенных на GitHub.
 
 [Rails Searchable API Doc][17]
-: Rails and Ruby documentation with smart searching.
+: Rails и Ruby документация с умным поиском.
 
 [APIdock][18]
-: Ruby, Rails and RSpec documentation with users’ notes.
+: Ruby, Rails и RSpec документация с комментариями и заметками
+пользователей.
 
-### Editors and IDEs
+### Редакторы и среды разработки
 
-For coding in Ruby you can use the default editor of your operating
-system. By the way, to be more effective in coding, it is worth to
-choose a source code editor with basic Ruby support (e.g.
-syntax-highlighting, file browsing) or an integrated development
-environment with advanced features (e.g. code completion, refactoring,
-testing support).
+Для программирования на Ruby вы можете использовать стандартный
+редактор вашей операционной системы. Кстати, для более эффективного
+написания кода, стоит использовать редактор с поддержкой Ruby (например,
+подсветка синтаксиса, просмотр файлов) или среду разработки с
+продвинутыми функциями (например, code completion, рефакторинг,
+поддержка тестирования).
 
-Here is a list of popular tools used by Rubyists:
+Далее следует список популярных инструментов, используемых рубистами:
 
-* Linux and cross-platform tools:
+* Инструменты для Linux и кросс-платформенные инструменты:
   * [Aptana Studio][19]
-  * [Emacs][20] with [Ruby mode][21] and [Rsense][22]
+  * [Emacs][20] с [Ruby режимом][21] и [Rsense][22]
   * [Geany][23]
   * [gedit][24]
-  * [Vim][25] with [vim-ruby][26] plugin and [Rsense][22]
+  * [Vim][25] с [vim-ruby][26] плагином и [Rsense][22]
   * [RubyMine][27]
   * [SciTe][28]
   * [NetBeans][36]
   * [Sublime Text][37]
 
-* On Windows:
+* На Windows:
   * [Notepad++][29]
   * [E-TextEditor][30]
   * [Ruby In Steel][31]
 
-* On Mac OS X:
+* На Mac OS X:
   * [TextMate][32]
   * [TextWrangler][33]
 
-### Further Reading
+### Дальнейшее чтение
 
-[Ruby-Doc.org][34] maintains a comprehensive list of English
-documentation sources. There are also plenty of [books about Ruby][35].
-If you have questions about Ruby the [mailing
-list](/en/community/mailing-lists/) is a great place to start.
+[Ruby-Doc.org][34] поддерживает актуальный список англоязычных источников.
+Также там есть неплохой список [книг по Ruby][35]. Если у вас есть
+вопросы по Ruby, [почтовая рассылка](/ru/community/mailing-lists/) – отличное место их задать.
 
 
 
