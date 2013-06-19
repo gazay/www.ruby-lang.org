@@ -1,54 +1,57 @@
 ---
 layout: page
-title: "Weblogs"
-lang: en
+title: "Блоги"
+lang: ru
 ---
 
-Ruby blogs have exploded over the past year and given sufficient
-hunting, you can unearth hundreds of blogs sharing bits of Ruby code,
-describing new techniques, or speculating on Ruby’s future.
+Блоги о Ruby взорвали интернет в последние годы, вы можете найти сотни
+блогов, которые делятся кусками Ruby кода, описывают новые технологии,
+или содержат размышления о будущем языка.
 
-### Mining for Ruby Blogs
+### Поиски Ruby блогов
 
-[**Ruby on del.icio.us**][1]\: Ruby and Rails are consistently one of
-the top fifty tags on del.icio.us, a popular link sharing site. Watch
-the [ruby][1] tag for incoming obscure links and its [popularity
-chart][2] for recent upcomers in the Ruby community.
+[**Ruby on del.icio.us**][1]\: Ruby и Rails постоянно находятся в топ-50
+тегов на сайте del.icio.us, популярном ресурсе для обменя ссылками.
+Просмотрите тег [ruby][1], чтобы получить представление о неясных ссылках и их
+[графе популярности][2] в разрезе текущих трендов в Ruby сообществе.
 
-**Planets**\: some planets (online specialized feeds agregators) have been running for years now. A few of them providing convenient content:
+**Planets**\: некоторые planets (специализированные онлайн сборщики подписок)
+работают уже годы. Некоторые из них наполнены неплохим содержимым:
 
 * [Ruby Corner][4]
 * [Planet Ruby][5]
 * [PlanetRubyOnRails.org][6]
 * [PlanetRubyOnRails.com][7]
 
-### Blogs of Note
+### Выдающиеся блоги
 
-A few notable blogs stand out for the frequency and immediacy of their
-updates.
+Несколько выдающихся блогов могут быть полезны ввиду их частых и
+незамедлительных обновлений:
 
-* [**O’Reilly Ruby**][8] is a group blog with pertinent Ruby tutorials
-  and interviews with interesting folks from around the community.
-* [**Riding Rails**][9] is the official group blog of the Ruby on Rails
-  team. If you are running Rails, this blog is essential for
-  notification of security updates and an overall view of the wide Rails
-  community.
-* [**Ruby Inside**][10] announces interesting applications and libraries
-  from throughout the world, both Ruby and Rails.
-* [**Matz’ Blog**][11] is a Japanese blog written by Ruby’s creator.
-  Even if you can’t read all of it, it’s good to know he’s right there!
+* [**O’Reilly Ruby**][8] – это групповой блог с хорошими уроками по Ruby и
+  интервью с интересными людьми из сообщества.
+* [**Riding Rails**][9] – это официальный групповой блог команды Ruby on Rails.
+  Если вы пользуетесь Rails, этот блог является наилучшим местом для
+  получения уведомлений об обновлениях по безопасности и общего обзора
+  сообщества Ruby on Rails.
+* [**Ruby Inside**][10] анонсирует интересные приложения и библиотеки со
+  всего мира для Ruby и Rails.
+* [**Matz’ Blog**][11] – это блог на японском, который ведет создатель
+  Ruby. Даже если вы не можете прочесть в нем все, просто хорошо знать
+  что он есть!
 
-### Spreading the Word
+### Распространение в мире
 
-If you’ve got a Ruby blog you’ve started, it’s wise to link the blog on
-[del.icio.us][12] with the *ruby* tag. You might also contact the
-weblogs above, if you are covering a topic they’d be interested in.
-(Obviously, if it’s not Rails-related, then the *Riding Rails* crew may
-not be as interested—but you never know.)
+Если вы ведете свой Ruby блог, полезным будет поделиться ссылкой на него
+на [del.icio.us][12] с тегом *ruby*. Вы можете также связаться с
+администраторами блогов выше, если вы освещаете интересную им тему.
+(очевидно, что если это не относится к Rails, то команда *Riding Rails*
+может быть не особо заинтересована – но кто знает)
 
-Ruby is also a common topic on [Digg][13], [Slashdot][14], [reddit][15],
-and [Hacker News][16], in their respective programming news. If you find
-some brilliant code out there, be sure to let them know!
+Ruby также довольно частая тема на [Digg][13], [Slashdot][14],
+[reddit][15] и [Hacker News][16], в разделах о новостях
+программирования. Если вы напишете некий замечательный код - обязательно
+поделитесь этой новостью там!
 
 
 
