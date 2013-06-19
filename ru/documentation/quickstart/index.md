@@ -1,64 +1,65 @@
 ---
 layout: page
-title: "Ruby in Twenty Minutes"
-lang: en
+title: "Ruby за двадцать минут"
+lang: ru
 
 header: |
   <div class="multi-page">
     <strong>1</strong>
     <span class="separator"> | </span>
-    <a href="2/" title="Part 2">2</a>
+    <a href="2/" title="Часть 2">2</a>
     <span class="separator"> | </span>
-    <a href="3/" title="Part 3">3</a>
+    <a href="3/" title="Часть 3">3</a>
     <span class="separator"> | </span>
-    <a href="4/" title="Part 4">4</a>
+    <a href="4/" title="Часть 4">4</a>
   </div>
-  <h1>Ruby in Twenty Minutes</h1>
+  <h1>Ruby за двадцать минут</h1>
 
 ---
 
-## Introduction
+## Вступление
 
-This is a small Ruby tutorial that should take no more than 20 minutes
-to complete. It makes the assumption that you already have Ruby
-installed. (If you don’t have Ruby on your computer
-[download](/en/downloads/) and install it before you get started.)
+Здесь представлено небольшое введение в Ruby, которое должно занять не
+более двадцати минут. Предполагается, что вы уже установили Ruby. (Если
+на вашем компьютере нет Ruby, [скачайте](/ru/downloads/)
+и установите его перед тем как начать.)
 
-## Interactive Ruby
+## Интерактивный Ruby
 
-Ruby comes with a program that will show the results of any Ruby
-statements you feed it. Playing with Ruby code in interactive sessions
-like this is a terrific way to learn the language.
+Ruby устанавливается вместе с программой, которая покажет результат
+любого Ruby кода, который вы напишете в ней. Играть с кодом Ruby
+интерактивно – отличный способ узнать язык.
 
-Open up IRB (which stands for Interactive Ruby).
+Откройте IRB (сокращение для Interactive Ruby).
 
-* If you’re using **Mac OS X** open up `Terminal` and type `irb`, then
-  hit enter.
-* If you’re using **Linux**, open up a shell and type `irb` and hit
-  enter.
-* If you’re using **Windows**, open `fxri` from the Ruby section of your
-  Start Menu.
+* Если вы используете **Mac OS X**, откройте `Terminal`, наберите
+  `irb` и нажмите Enter.
+* Если вы используете **Linux**, откройте `shell`, наберите
+  `irb` и нажмите Enter.
+* Если вы используете **Windows**, откройте `fxri` из секции Ruby вашего
+  меню Пуск.
 ^
 
 {% highlight ruby %}
 irb(main):001:0>
 {% endhighlight %}
 
-Ok, so it’s open. Now what?
+Окей, итак он запущен. Что дальше?
 
-Type this: `"Hello World"`
+Наберите это: `"Hello World"`
 
 {% highlight ruby %}
 irb(main):001:0> "Hello World"
 => "Hello World"
 {% endhighlight %}
 
-## Ruby Obeyed You!
+## Ruby повиновался вам!
 
-What just happened? Did we just write the world’s shortest “Hello World”
-program? Not exactly. The second line is just IRB’s way of telling us
-the result of the last expression it evaluated. If we want to print out
-“Hello World” we need a bit more:
+Что только что произошло? Неужели мы только что написали кратчайшую в
+мире программу "Hello World"? Не совсем. Вторая строка, это всего-лишь
+способ IRB показать нам результат последнего выполненного выражения.
+Если мы хотим напечатать "Hello World", мы должны написать немного
+больше:
 
 {% highlight ruby %}
 irb(main):002:0> puts "Hello World"
@@ -66,68 +67,71 @@ Hello World
 => nil
 {% endhighlight %}
 
-`puts` is the basic command to print something out in Ruby. But then
-what’s the `=> nil` bit? That’s the result of the expression. `puts`
-always returns nil, which is Ruby’s absolutely-positively-nothing value.
+`puts` – основная команда в Ruby, позволяющая напечатать что-нибудь. Но
+что же такое тогда `=> nil`? Это результат выполнения выражения. `puts`
+всегда возвращает nil, который в Ruby обозначает значение
+абсолютно-положительного ничего.
 
-## Your Free Calculator is Here
+## Ваш бесплатный калькулятор
 
-Already, we have enough to use IRB as a basic calculator:
+Теперь мы знаем достаточно, чтобы использовать IRB как простейший
+калькулятор:
 
 {% highlight ruby %}
 irb(main):003:0> 3+2
 => 5
 {% endhighlight %}
 
-Three plus two. Easy enough. What about three *times* two? You could
-type it in, it’s short enough, but you may also be able to go up and
-change what you just entered. Try hitting the **up-arrow** on your
-keyboard and see if it brings up the line with `3+2` on it. If it does,
-you can use the left arrow key to move just after the `+` sign and then
-use backspace to change it to a `*` sign.
+Три плюс два. Достаточно просто. Что насчет три *умножить* на два? Вы
+можете набрать сами, это достаточно короткий код, но также вы можете
+вернуться выше и изменить то, что вы ввели ранее. Попробуйте нажать
+**стрелку наверх** на клавиатуре и вы увидите строку с `3+2`. Если это
+так - вы можете использовать стрелку влево, чтобы переместить курсор
+прямо за `+`, нажать backspace и поменять его на `*`.
 
 {% highlight ruby %}
 irb(main):004:0> 3*2
 => 6
 {% endhighlight %}
 
-Next, let’s try three squared:
+Теперь давайте попробуем возвести три в квадрат:
 
 {% highlight ruby %}
 irb(main):005:0> 3**2
 => 9
 {% endhighlight %}
 
-In Ruby `**` is the way you say “to the power of”. But what if you want
-to go the other way and find the square root of something?
+В руби `**` – способ возвести число в степень. Но что если вы хотите
+пойти в обратном направлении и узнать квадратный корень от чего-либо?
 
 {% highlight ruby %}
 irb(main):006:0> Math.sqrt(9)
 => 3.0
 {% endhighlight %}
 
-Ok, wait, what was that last one? If you guessed, “it was figuring out
-the square root of nine,” you’re right. But let’s take a closer look at
-things. First of all, what’s `Math`?
+Окей, погодите, что это было? Если вы думаете "это был способ выяснить
+квадратный корень из девяти", вы правы. Но давайте приглядимся к
+деталям. Во-первых, что такое `Math`?
 
-## Modules Group Code by Topic
+## Модули группируют код по темам
 
-`Math` is a built-in module for mathematics. Modules serve two roles in
-Ruby. This shows one role: grouping similar methods together under a
-familiar name. `Math` also contains methods like `sin()` and `tan()`.
+`Math` – это встроенный модуль для математических операций. Модули
+выполняют две роли в Ruby. Наш пример показывает первую роль:
+сгруппировать похожие методы вместе под знакомым именем. `Math` также
+содержит методы типа `sin()` и `tan()`.
 
-Next is a dot. What does the dot do? The dot is how you identify the
-receiver of a message. What’s the message? In this case it’s `sqrt(9)`,
-which means call the method `sqrt`, shorthand for “square root” with the
-parameter of `9`.
+Следующее – это точко. Что делает точка? Точка – это то, как вы
+указываете получателя сообщения. Что такое сообщение? В данном случае
+это `sqrt(9)`, которое означает вызов метода `sqrt`, сокращение от
+"square root" (квадратный корень), с параметром `9`.
 
-The result of this method call is the value `3.0`. You might notice it’s
-not just `3`. That’s because most of the time the square root of a
-number won’t be an integer, so the method always returns a
-floating-point number.
+Результат от вызова этого метода – `3.0`. Вы можете заметить, что это не
+просто `3`. Это потому, что большинство значений квадратного корня от
+числа не являются целыми, так что метод всегда возвращает число с
+плавающей точкой.
 
-What if we want to remember the result of some of this math? Assign the
-result to a variable.
+Что если мы хотим запомнить результат какой-либо математической
+операции? Присвойте это значение переменной.
 
 {% highlight ruby %}
 irb(main):007:0> a = 3 ** 2
@@ -137,7 +141,7 @@ irb(main):008:0> b = 4 ** 2
 irb(main):009:0> Math.sqrt(a+b) => 5.0
 {% endhighlight %}
 
-As great as this is for a calculator, we’re getting away from the
-traditional `Hello World` message that beginning tutorials are supposed
-to focus on… [so let’s go back to that.](2/)
+Калькулятор это замечательно, но мы отошли от традиционного сообщения
+`Hello World`, которым начали наше введенией и на котором мы должны были
+сфокусироваться… [так что давайте вернемся к нему.](2/)
 

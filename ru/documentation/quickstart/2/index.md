@@ -1,24 +1,24 @@
 ---
 layout: page
-title: "Ruby in Twenty Minutes"
-lang: en
+title: "Ruby за двадцать минут"
+lang: ru
 
 header: |
   <div class="multi-page">
-    <a href="../" title="Part 1">1</a>
+    <a href="../" title="Часть 1">1</a>
     <span class="separator"> | </span>
     <strong>2</strong>
     <span class="separator"> | </span>
-    <a href="../3/" title="Part 3">3</a>
+    <a href="../3/" title="Часть 3">3</a>
     <span class="separator"> | </span>
-    <a href="../4/" title="Part 4">4</a>
+    <a href="../4/" title="Часть 4">4</a>
   </div>
-  <h1>Ruby in Twenty Minutes</h1>
+  <h1>Ruby за двадцать минут</h1>
 
 ---
 
-What if we want to say “Hello” a lot without getting our fingers all
-tired? We need to define a method!
+Что если мы хотим сказать "Hello" без утомления наших пальцев? Мы должны
+создать метод!
 
 {% highlight ruby %}
 irb(main):010:0> def h
@@ -27,6 +27,8 @@ irb(main):012:1> end
 => nil
 {% endhighlight %}
 
+Код `def h` начинает объявление метода. Он говорит Ruby, что мы
+определяем метод, имя которого `h`.
 The code `def h` starts the definition of the method. It tells Ruby that
 we’re defining a method, that its name is `h`. The next line is the body
 of the method, the same line we saw earlier: `puts "Hello World"`.
