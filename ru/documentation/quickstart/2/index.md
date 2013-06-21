@@ -27,18 +27,16 @@ irb(main):012:1> end
 => nil
 {% endhighlight %}
 
-Код `def h` начинает объявление метода. Он говорит Ruby, что мы
-определяем метод, имя которого `h`.
-The code `def h` starts the definition of the method. It tells Ruby that
-we’re defining a method, that its name is `h`. The next line is the body
-of the method, the same line we saw earlier: `puts "Hello World"`.
-Finally, the last line `end` tells Ruby we’re done defining the method.
-Ruby’s response `=> nil` tells us that it knows we’re done defining the
-method.
+Код `def h` означает начало объявление метода. Он говорит Ruby, что мы
+определяем метод, имя которого `h`. Следующая строка – тело метода, та
+же строка, что мы видели раньше: `puts "Hello World". И, наконец,
+последняя строка, `end`, говорит Ruby, что мы завершили объявление
+метода. Ответ от Ruby, `=> nil`, говорит нам, что он понял, что мы
+завершили объявление метода.
 
-## The Brief, Repetitive Lives of a Method
+## Кратко о повторяющихся жизнях метода
 
-Now let’s try running that method a few times:
+Теперь давайте попробуем вызвать метод несколько раз:
 
 {% highlight ruby %}
 irb(main):013:0> h
@@ -49,13 +47,13 @@ Hello World!
 => nil
 {% endhighlight %}
 
-Well, that was easy. Calling a method in Ruby is as easy as just
-mentioning its name to Ruby. If the method doesn’t take parameters
-that’s all you need. You can add empty parentheses if you’d like, but
-they’re not needed.
+Ну, это было просто. Вызвать метод в Ruby так же просто, как просто
+упомянуть его имя в коде. Если метод не принимает параметры – это все
+что вам нужно сделать. Вы можете добавить пустые скобки, если вам так
+нравится, но это не обязательно.
 
-What if we want to say hello to one person, and not the whole world?
-Just redefine `h` to take a name as a parameter.
+Что если мы хотим сказать hello одному человеку, а не всему миру?
+Просто переопределим метод `h`, чтобы он принимал имя как параметр.
 
 {% highlight ruby %}
 irb(main):015:0> def h(name)
@@ -67,15 +65,16 @@ Hello Matz!
 => nil
 {% endhighlight %}
 
-So it works… but let’s take a second to see what’s going on here.
+Итак, это работает… но давайте на секунду задумаемся, что здесь
+происходит.
 
-## Holding Spots in a String
+## Места для интерполяции в String
 
-What’s the `#{name}` bit? That’s Ruby’s way of inserting something into
-a string. The bit between the braces is turned into a string (if it
-isn’t one already) and then substituted into the outer string at that
-point. You can also use this to make sure that someone’s name is
-properly capitalized:
+Что такое `#{name}` в коде выше? Это способ Ruby вставить что-либо в
+строку. Кусок кода между фигурными скобками превратится в строку (если
+это еще не строка) и потом подставится во внешнюю строку в этом месте.
+Вы также можете использовать это, чтобы убедиться, что имя будет с
+большой буквы:
 
 {% highlight ruby %}
 irb(main):019:0> def h(name = "World")
@@ -90,17 +89,18 @@ Hello World!
 => nil
 {% endhighlight %}
 
-A couple of other tricks to spot here. One is that we’re calling the
-method without parentheses again. If it’s obvious what you’re doing, the
-parentheses are optional. The other trick is the default parameter
-`World`. What this is saying is “If the name isn’t supplied, use the
-default name of `"World"`”.
+Вы должны здесь отметить несколько других приемов. Один из них, что мы
+опять вызываем метод без скобок. Если очевидно то, что вы хотите сделать
+– скобки не обязательны. Другой прием – это параметр по умолчанию
+`World`. Это означает что, "Если имя не передано в качестве параметра,
+используй параметр по умолчанию `World`".
 
-## Evolving Into a Greeter
+## Эволюционируем в Greeter (Приветствующего)
 
-What if we want a real greeter around, one that remembers your name and
-welcomes you and treats you always with respect. You might want to use
-an object for that. Let’s create a “Greeter” class.
+Что если мы хотим создать реального приветствующего, того кто запомнит
+ваше имя и поприветствует вас и всегда будет относиться к вам с
+уважением? Вы можете использовать для этого объект. Давайте создадим
+класс "Greeter".
 
 {% highlight ruby %}
 irb(main):024:0> class Greeter
@@ -117,11 +117,12 @@ irb(main):034:1> end
 => nil
 {% endhighlight %}
 
-The new keyword here is `class`. This defines a new class called Greeter
-and a bunch of methods for that class. Also notice `@name`. This is an
-instance variable, and is available to all the methods of the class. As
-you can see it’s used by `say_hi` and `say_bye`.
+Новое ключевое слово здесь - `class`. Оно служит для объявления нового
+класса, который мы назвали Greeter и несколько методов для этого класса.
+Также заметтье `@name`. Это переменная объекта и она доступна для всех
+методов в классе. Как вы можете видеть, она используется методами
+`say_hi` и `say_bye`.
 
-So how do we get this Greeter class set in motion? [Create an
-object.](../3/)
+Итак, как мы сможем заставить этот класс Greeter работать? [Создадим
+объект.](../3/)
 
