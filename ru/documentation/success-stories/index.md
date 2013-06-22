@@ -1,83 +1,87 @@
 ---
 layout: page
-title: "Success Stories"
-lang: en
+title: "Успешный опыт"
+lang: ru
 ---
 
-Many people use Ruby in their daily jobs. Others just as a hobby. Here
-you’ll find a small sample of real world usage of Ruby.
+Многие люди используют Ruby на их повседневных работах. Другие лишь в
+качестве хобби. Здесь вы найдете небольшие примеры реального
+использования Ruby в мире.
 
-#### Simulations
+#### Моделирование
 
-* [NASA Langley Research Center][1] uses Ruby to conduct simulations.
+* [NASA Langley Research Center][1] использует Ruby для проведения
+  моделирования
 ^
 
-* A research group in [Motorola][2] uses Ruby to script a simulator,
-  both to generate scenarios and to post process the data.
+* Исследовательская группа в [Motorola][2] использует Ruby скрипты для
+  моделирования, одновременно для генерации сценариев и для обработки
+  данных.
 
-#### 3D Modeling
+#### 3D моделирование
 
-* [Google SketchUp][3] is a 3D modeling application that uses Ruby for
-  its macro scripting API.
+* [Google SketchUp][3] – это приложение для 3D моделирования, которое
+  использует Ruby в качестве макро скриптового API.
 
-#### Business
+#### Бизнес
 
-* [Toronto Rehab][4] uses a RubyWebDialogs based app to manage and track
-  on-call and on-site support for the IT help desk and IT operations
-  teams.
+* [Toronto Rehab][4] использует приложение, основанное на
+  RubyWebDialogs, чтобы регулировать и прослеживать звонки и обращения
+  через сайт для их IT команд.
 
-#### Robotics
+#### Робототехника
 
-* At [MORPHA][5] project, Ruby was used to implemented the reactive
-  control part for the Siemens service robot.
+* В проекте [MORPHA][5], Ruby был задействован для создания реактивных
+  элементов управления для обслуживающего робота Siemens.
 
-#### Networking
+#### Сеть
 
-* [Open Domain Server][6] uses Ruby to allow people using Dynamic DNS
-  clients to update in real time their IP configuration so that it can
-  be mapped to static domains.
+* [Open Domain Server][6] использует Ruby, чтобы позволить людям
+  использовать динамические DNS клиенты для того, чтобы онлайн обновлять
+  их конфигурацию IP таким образом, что он может быть привязан к
+  статическим доменам.
 
-#### Telephony
+#### Телефония
 
-* Ruby is being used within [Lucent][7] on a 3G wireless telephony
-  product.
+* Ruby используется в [Lucent][7], в их 3G беспроводном телефонном
+  продукте.
 
-#### System Administration
+#### Системное администрирование
 
-* Ruby was used to write the central data collection portion of [Level 3
-  Communications][8] Unix Capacity and Planning system that gathers
-  performance statistics from over 1700 Unix (Solaris and Linux) servers
-  scattered around the globe.
+* Ruby был использован для написания центра сбора данных [Level 3
+  Communications][8] о мощности и планировании системы, которая собирает
+  статистику нагрузок с более чем 1700 Unix (Solaris и Linux) серверов,
+  раскиданых по всему миру.
 
-#### Web Applications
+#### Веб-приложения
 
-* [Basecamp][9], a web-based project management application developed by
-  [37signals][10], is programmed entirely in Ruby.
+* [Basecamp][9], веб-сервис для управления проектами, разработанный
+  компанией [37signals][10], написан целиком на Ruby.
 ^
 
-* [43 Things][11] allows you to keep a list of goals and share it with
-  the world. It was developed entirely in Ruby.
+* [43 Things][11] позволяет вам хранить список целей и делиться им со
+  всем миром. Написан целиком на Ruby.
 ^
 
-* [A List Apart][12], a magazine for people who make websites that has
-  been around since 1997, has recently been revamped and uses a custom
-  application built with Ruby on Rails.
+* [A List Apart][12], журнал для людей, которые создают веб-сайты,
+  который работает с 1997 года. Недавно был обновлен и приложение было
+  написано на Ruby on Rails.
 ^
 
-* [Blue Sequence][13], a sophisticated mission-critical application
-  which forms part of Toyota Motor Manufacturing’s own
-  “sequence-in-time” production process, has recently been selected as
-  finalist the British Computer (BCS) Information Management Awards.
+* [Blue Sequence][13], сложное критически-целевое приложение, которое
+  формирует часть собственного "последовательного-во-времени" процесса
+  производства Toyota Motor Manufacturing, была недавно выбрана в
+  качестве финалиста British Computer (BCS) Information Management Awards.
 
-#### Security
+#### Безопасность
 
-* The [Metasploit Framework][14], a community open source project
-  managed by [Rapid7][15], is a free penetration testing platform that
-  helps IT professionals assess the security of their networks and
-  applications. The Metasploit Project consists of over 700,000 lines of
-  code and has been downloaded over a million times in 2010. The
-  commercial editions [Metasploit Express][16] and [Metasploit Pro][17]
-  developed by Rapid7 are also based on Ruby.
+* [Metasploit Framework][14], проект с открытым исходным кодом,
+  поддерживаемый [Rapid7][15], это бесплатная платформа проникающего тестирования,
+  которая помогает IT профессионалам проверить безопасность их сети и
+  приложений. Metasploit Project содержит более 700 000 строк кода и был
+  скачан больше миллиона раз в 2010 году. Комерческая версия [Metasploit
+  Express][16] и [Metasploit Pro][17] разработаны Rapid7 и так же написаны
+  на Ruby.
 
 
 

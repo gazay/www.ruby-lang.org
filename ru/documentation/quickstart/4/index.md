@@ -1,38 +1,39 @@
 ---
 layout: page
-title: "Ruby in Twenty Minutes"
-lang: en
+title: "Ruby за двадцать минут"
+lang: ru
 
 header: |
   <div class="multi-page">
-    <a href="../" title="Part 1">1</a>
+    <a href="../" title="Часть 1">1</a>
     <span class="separator"> | </span>
-    <a href="../2/" title="Part 2">2</a>
+    <a href="../2/" title="Часть 2">2</a>
     <span class="separator"> | </span>
-    <a href="../3/" title="Part 3">3</a>
+    <a href="../3/" title="Часть 3">3</a>
     <span class="separator"> | </span>
     <strong>4</strong>
   </div>
-  <h1>Ruby in Twenty Minutes</h1>
+  <h1>Ruby за двадцать минут</h1>
 
 ---
 
-So, looking deeper at our new program, notice the initial lines, which
-begin with a hash mark (#). In Ruby, anything on a line after a hash
-mark is a comment and is ignored by the interpreter. The first line of
-the file is a special case, and under a Unix-like operating system tells
-the shell how to run the file. The rest of the comments are there just
-for clarity.
+Итак, приглядимся повнимательнее к нашей новой программе. Обратите
+внимание на первые строки, начинающиеся с хэш символа (#). В Ruby все,
+что в одной строке идет после хэш символа является комментарием и
+игнорируется интерпритатором. Первая строка файла – особый случай, и под
+Unix-подобными операционными системами говорит шеллу (shell) как
+запускать данный файл. Остальные комментарии служат лишь для пояснений
+кода.
 
-Our `say_hi` method has become a bit trickier:
+Наш `say_hi` метод стал немного более сложным:
 
 {% highlight ruby %}
-# Say hi to everybody
+# Сказать всем привет
 def say_hi
   if @names.nil?
     puts "..."
   elsif @names.respond_to?("each")
-    # @names is a list of some kind, iterate!
+    # @names это некий список, итерируй!
     @names.each do |name|
       puts "Hello #{name}!"
     end
@@ -42,18 +43,19 @@ def say_hi
 end
 {% endhighlight %}
 
-It now looks at the `@names` instance variable to make decisions. If
-it’s nil, it just prints out three dots. No point greeting nobody,
-right?
+Теперь он смотрит на переменную `@names`, чтобы принять решение. Если
+ее значение nil, он просто печатает три точки. Нет смысла приветствовать
+несуществующее, верно?
 
-## Cycling and Looping—a.k.a. Iteration
+## Циклы и повторы – так же известные как итерации
 
-If the `@names` object responds to `each`, it is something that you can
-iterate over, so iterate over it and greet each person in turn. Finally,
-if `@names` is anything else, just let it get turned into a string
-automatically and do the default greeting.
+Если объект, записанный в переменной `@names` откликается на метод
+`each`, значит он является объектом на котором вы можете итерировать. И
+итерируя по нему вы можете приветствовать каждого человека за раз. И
+наконец, если `@names` является чем-то совсем другим, просто превратим
+ее в строку автоматически и поприветствуем.
 
-Let’s look at that iterator in more depth:
+Давайте взглянем на итератор повнимательнее:
 
 {% highlight ruby %}
 @names.each do |name|
@@ -61,17 +63,19 @@ Let’s look at that iterator in more depth:
 end
 {% endhighlight %}
 
-`each` is a method that accepts a block of code then runs that block of
-code for every element in a list, and the bit between `do` and `end` is
-just such a block. A block is like an anonymous function or `lambda`.
-The variable between pipe characters is the parameter for this block.
+`each` – это метод, который принимает блок кода и запускает этот блок
+кода для каждого элемента в списке. И в примере выше, код между `do` и
+`end`, это просто некий блок. Блок это что-то вроде анонимной функции
+или `лямбды`. Перменная между знаками (|) – это параметр для данного
+блока, как раз тот самый элемент списка, на которым будет производится
+действие в блоке кода.
 
-What happens here is that for every entry in a list, `name` is bound to
-that list element, and then the expression `puts "Hello #{name}!"` is
-run with that name.
+Что происходит здесь, это то, что каждая запись в списке, `name`,
+привязана к элементу в списке, и таким образом выражение `puts "Hello
+#{name}!"` будет выполнено с этим элементом.
 
-Most other programming languages handle going over a list using the
-`for` loop, which in C looks something like:
+Большинство других языков программирования поддерживают прохождение по
+списку при помощи цикла `for`, который в C выглядит примерно так:
 
 {% highlight c %}
 for (i=0; i<number_of_elements; i++)
@@ -80,28 +84,28 @@ for (i=0; i<number_of_elements; i++)
 }
 {% endhighlight %}
 
-This works, but isn’t very elegant. You need a throw-away variable like
-`i`, have to figure out how long the list is, and have to explain how to
-walk over the list. The Ruby way is much more elegant, all the
-housekeeping details are hidden within the `each` method, all you need
-to do is to tell it what to do with each element. Internally, the `each`
-method will essentially call `yield "Albert"`, then `yield "Brenda"` and
-then `yield "Charles"`, and so on.
+Это работает, но это не так элегантно. Вам нужно заводить перменную типа
+`i`, понимать, сколько элементов в списке, и объяснять языку, как он
+должен проходить по списку. Путь Ruby намного элегантней, все детали
+исполнения скрыты внутри `each` метода, и все что вам нужно сделать –
+это сказать, что нужно сделать с элементами списка. Внутри метод `each`
+вызывает `yield "Albert'", затем `yield "Brenda"` и так далее с
+остальными именами.
 
-## Blocks, the Highly Sparkling Glint on the Edge of Ruby
+## Блоки, прекрасные блестки на грани Ruby
 
-The real power of blocks is when dealing with things that are more
-complicated than lists. Beyond handling simple housekeeping details
-within the method, you can also handle setup, teardown, and errors—all
-hidden away from the cares of the user.
+Реальная сила блоков видна, когда вы работаете с более сложными
+сущностями, чем списки. За выполнением простых деталей внутри метода, вы
+также можете осуществлять там некую настройку, декомпозицию, отлавливать
+ошибки – все может быть скрыто от пользователя.
 
 {% highlight ruby %}
-# Say bye to everybody
+# Сказать всем пока
 def say_bye
   if @names.nil?
     puts "..."
   elsif @names.respond_to?("join")
-    # Join the list elements with commas
+    # Объединить все значения из списка через запятую
     puts "Goodbye #{@names.join(", ")}.  Come back soon!"
   else
     puts "Goodbye #{@names}.  Come back soon!"
@@ -109,47 +113,50 @@ def say_bye
 end
 {% endhighlight %}
 
-The `say_bye` method doesn’t use `each`, instead it checks to see if
-`@names` responds to the `join` method, and if so, uses it. Otherwise,
-it just prints out the variable as a string. This method of not caring
-about the actual *type* of a variable, just relying on what methods it
-supports is known as “Duck Typing”, as in “if it walks like a duck and
-quacks like a duck…”. The benefit of this is that it doesn’t
-unnecessarily restrict the types of variables that are supported. If
-someone comes up with a new kind of list class, as long as it implements
-the `join` method with the same semantics as other lists, everything
-will work as planned.
+Метод `say_bye` не использует `each`, вместо этого он проверяет, что
+`@names` откликается на метод `join`, и если так, использует его. В
+другом случае, он просто печатает переменную в виде строки. Этот метод
+не волнует настоящий *тип* переменной, просто действует в зависимости
+от методов, которые тот поддерживает. Это так же известно под названием
+"Duck Typing" (Утиная типизация), как в известной фразе – "если оно
+ходит как утка, если оно квакает как утка – это утка". Выигрышь от этого
+в том, что вам не обязательно ограничивать типы переменных, которые
+поддерживаются. Если кто-то захочет использовать ваш метод с неким новым
+классом списка, пока тот поддерживает вызов метода `join` с аналогичной
+другим спискам семантикой – все будет работать как запланировано.
 
-## Kicking Off the Script
+## Запускаем скрипт
 
-So, that’s the MegaGreeter class, the rest of the file just calls
-methods on that class. There’s one final trick to notice, and that’s the
-line:
+Итак, это был MegaGreeter класс, остальное в файле, это лишь вызовы
+метода на этом классе. Последний трюк, на который стоит обратить
+внимание, это следующая строка:
 
 {% highlight ruby %}
 if __FILE__ == $0
 {% endhighlight %}
 
-`__FILE__` is the magic variable that contains the name of the current
-file. `$0` is the name of the file used to start the program. This check
-says “If this is the main file being used…” This allows a file to be
-used as a library, and not to execute code in that context, but if the
-file is being used as an executable, then execute that code.
+`__FILE__` – это магическая переменная, которая содержит имя текущего
+файла. `$0` – это имя файла, которое было использовано при запуске
+программы. Данная проверка говорит: "Если это тот самый файл, который
+был запущен изначально…". Это позволяет файлу быть использованным как
+библиотека, и не выполнять код в данном контексте. Но если файл
+используется как выполняемый – тогда выполняем этот код.
 
-## Consider Yourself Introduced
+## Считайте, что вы в теме
 
-So that’s it for the quick tour of Ruby. There’s a lot more to explore,
-the different control structures that Ruby offers; the use of blocks and
-`yield`; modules as mixins; and more. I hope this taste of Ruby has left
-you wanting to learn more.
+Итак, это конец краткого тура по Ruby. Там еще столько для изучения,
+различные структуры, которые предлагает Ruby; использование блоков и
+`yield`; модули и примеси; и многое-многое другое. Я надеюсь, что эти
+небольшие примеры оставят в вас приятное послевкусие от Ruby и вы
+захотите узнать его еще лучше!
 
-If so, please head on over to our [Documentation](/en/documentation/)
-area, which rounds up links to manuals and tutorials, all freely
-available online.
+Если так, пожалуйста просмотрите нашу
+[Документацию](/ru/documentation/), которая содержит в себе ссылки на
+руководства и введения, все они бесплатно доступны онлайн.
 
-Or, if you’d really like to dig into a book, check the [book list][1]
-(off-site link) for titles available for sale online or at your local
-bookseller.
+Или, если вы больше хотите узнать из книг, просмотрите [список книг][1]
+(они доступны вне нашего сайта) на предмет доступных в продаже онлайн
+или в ваших местных книжных магазинах.
 
 
 
