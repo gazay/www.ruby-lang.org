@@ -1,52 +1,47 @@
 ---
 layout: page
-title: "To Ruby From PHP"
-lang: en
+title: "В Ruby из PHP"
+lang: ru
 ---
 
-PHP is in widespread use for web applications, but if you want to use
-Ruby on Rails or just want a language that’s more tailored for general
-use, Ruby is worth a look.
+PHP - широкораспространенный язык для веб-приложений, но если вам хочется
+использовать Ruby on Rails или просто хотите познакомиться с языком более
+широкого назначения - Ruby то, что надо!
 
-### Similarities
+### Сходства
 
-As in PHP, in Ruby…
+В Ruby, как и в PHP, ...
 
-* Ruby is dynamically typed, like in PHP, so you don’t need to worry
-  about having to declare variables.
-* There are classes, and you can control access to them like in PHP 5
-  (`public`, `protected` and `private`)
-* Some variables start with $, like in PHP (but not all)
-* There’s `eval`, too.
-* You can use string interpolating. Instead of doing ”$foo is a $bar”,
-  you can do ”#\{foo} is a #\{bar}”—like in PHP, this doesn’t apply for
-  single-quoted strings.
-* There’s heredocs
-* Ruby has exceptions, like PHP 5
-* There’s a fairly large standard library
-* Arrays and hashes work like expected, if you exchange `array()` for
-  `{` and `}`\: `array('a' => 'b')` becomes `{'a' => 'b'}`.
-* `true` and `false` behave like in PHP, but `null` is called `nil`
+* Ruby динамически типизирован, нет необходимости объявлять переменные.
+* имеется разграничение видимости в классах, как в PHP 5.
+  (`public`, `protected` и `private`).
+* некоторые переменные начинаются с $ (но не все).
+* тоже есть `eval`.
+* можно интерполировать строки (вместо `"$foo is a $bar"` пишется
+  `"#\{foo} is a #\{bar}"`), как и в PHP это не относится к одинарным кавычкам.
+* поддерживается Heredoc-синтаксис.
+* есть исключения (exceptions), как в PHP 5.
+* богатая стандартная библиотека.
+* Массивы и хеши работают так, как вы ожидаете, просто замените `array()` на
+  `{` и `}`: `array('a' => 'b')` станет `{'a' => 'b'}`.
+* `true` и `false` ведут себя так же, `null` называется `nil`
 
-### Differences
+### Отличия
 
-Unlike in PHP, in Ruby…
+В отличии от PHP в Ruby...
 
-* There’s strong typing. You’ll need to call `to_s`, `to_i` etc. to
-  convert between strings, integers and so on, instead of relying on the
-  language to do it
-* Strings, numbers, arrays, hashes, etc. are objects. Instead of calling
-  abs(-1) it’s -1.abs
-* Parentheses are optional in method calls, except to clarify which
-  parameters go to which method calls
-* Instead of naming conventions, like underscores, the standard library
-  and extensions are organized in modules and classes
-* Reflection is an inherent capability of objects, you don’t need to use
-  `Reflection` classes like in PHP 5
-* Variables are references.
-* There’s no `abstract` classes or `interface`s
-* Hashes and arrays are not interchangeable
-* Only `false` and `nil` are false: `0`, `array()` and `""` are all true
-  in conditionals.
-* Almost everything is a method call, even `raise` (`throw` in PHP).
-
+* строгая типизация - надо вызывать `to_s`, `to_i`, чтобы преобразовывать от
+  строки к числу и обратно, не полагаясь, что язык это сделает неявно.
+* строки, числа, массивы и хеши - объекты - вместо вызова функции с ними как
+  аргументами (`abs(-1)`) вызывается метод (`-1.abs`).
+* скобки в вызове метода необязательны, кроме случаев, когда надо явно указать,
+  какой аргумент передается в какую функцию.
+* вместо соглашений об именовании (например подчеркивания) стандартная библиотека
+  и расширения представляют собой организованные модули и классы.
+* рефлексия - неотъемлемая способность объектов, нет необъодимости использовать
+  отдельный класс `Reflection` как в PHP 5.
+* переменные - это ссылки
+* отсутствуют абстрактные классы и интерфейсы
+* массив и хеш - не одно и то же
+* только `false` и `nil` являются ложью: `0`, `array()` и `""` являются истиной.
+* практически все - это вызов метода, даже `raise` (`throw` в PHP).
