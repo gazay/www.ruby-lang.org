@@ -1,62 +1,59 @@
 ---
 layout: page
-title: "Ruby From Other Languages"
-lang: en
+title: 'В Ruby из других языков'
+lang: ru
 ---
 
-When you first look at some Ruby code, it will likely remind you of
-other programming languages you’ve used. This is on purpose. Much of the
-syntax is familiar to users of Perl, Python, and Java (among other
-languages), so if you’ve used those, learning Ruby will be a piece of
-cake.
+Если вы впервые посмотрите на Ruby код, он скорее всего напомнит вам некоторые
+используемые вами языки. Это не случайно. Большинство синтаксических конструкций
+покажутся пользователям Perl, Python и Java, так что, если вы уже
+писали на них, изучение Ruby покажется проще простого.
 
-This document contains two major sections. The first attempts to be a
-rapid-fire summary of what you can expect to see when going from
-language *X* to Ruby. The second section tackles the major language
-features and how they might compare to what you’re already familiar
-with.
+Эта страница стстоит из двух частей. В первой содержится попытка сверхкратко описать,
+что вас ждет от перехода с языка *Х* на Ruby. Вторая рассказывает об основных
+особенностях языка, и как эти особенности соотносятся с тем, что вы уже знаете.
 
-## What to Expect: *Language X* to Ruby
+## Чего ожидать после *языка Х* на Ruby
 
-* [To Ruby From C and
-  C++](/en/documentation/ruby-from-other-languages/to-ruby-from-c-and-c-/)
-* [To Ruby From
-  Java](/en/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [To Ruby From
-  Perl](/en/documentation/ruby-from-other-languages/to-ruby-from-perl/)
-* [To Ruby From
-  PHP](/en/documentation/ruby-from-other-languages/to-ruby-from-php/)
-* [To Ruby From
-  Python](/en/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [Пришедшим из С и С++
+  ](/ru/documentation/ruby-from-other-languages/to-ruby-from-c-and-c-/)
+* [В Ruby из Java
+  ](/ru/documentation/ruby-from-other-languages/to-ruby-from-java/)
+* [Знакомым с Perl
+  ](/ru/documentation/ruby-from-other-languages/to-ruby-from-perl/)
+* [Разработчикам на PHP
+  ](/ru/documentation/ruby-from-other-languages/to-ruby-from-php/)
+* [Пришедшим из Python
+  ](/ru/documentation/ruby-from-other-languages/to-ruby-from-python/)
 
-## Important Language Features And Some Gotchas
+## Важные замечания по поводу языка и подсказки
 
-Here are some pointers and hints on major Ruby features you’ll see while
-learning Ruby.
+Тут собрано несколько подсказок и советов про основные особенностей Ruby,
+которые вы увидите по мере изучения языка
 
-### Iteration
+### Итерации и циклы
 
-Two Ruby features that are a bit unlike what you may have seen before,
-and which take some getting used to, are “blocks” and iterators. Instead
-of looping over an index (like with C, C++, or pre-1.5 Java), or looping
-over a list (like Perl’s <tt>for (@a) \{...}</tt>, or Python’s <tt>for i
-in aList: ...</tt>), with Ruby you’ll very often instead see
+Две особенности  Ruby, отличающиеся от всего ранее увиденного, но к которым
+надо привыкнуть - это "блоки" и итераторы. Вместо того, чтобы итерироваться
+по индексу (как в С, С++ и pre-1.5 Java), или по списку (как в Perl <tt>for
+(@a) \{...}</tt>, или в Python <tt>for i in aList: ...</tt>), в Ruby зачастую
+вы увидите
 
 {% highlight ruby %}
 some_list.each do |this_item|
-  # We're inside the block.
-  # deal with this_item.
+  # Внутри "блока"
+  # у нас есть объект this_item.
 end
 {% endhighlight %}
 
-For more info on `each` (and it’s friends `collect`, `find`, `inject`,
-`sort`, etc.), see `ri Enumerable` (and then <tt>ri
-Enumerable#*func\_name*</tt>).
+За более подробной информацией о `each` (и сопутствующих `collect`, `find`,
+`inject`, `sort`, и т.д.), обращайтесь к `ri Enumerable` (и <tt>ri
+Enumerable#*имя\_функции*</tt>).
 
-### Everything has a value
+### Все имеет значение
 
-There’s no difference between an expression and a statement. Everything
-has a value, even if that value is **nil**. This is possible:
+В Ruby нет разницы между выражением и оператором. Все имеет значение, даже если
+это значение - **nil**. Вот так:
 
 {% highlight ruby %}
 x = 10
@@ -69,13 +66,13 @@ end
 z # => true
 {% endhighlight %}
 
-### Symbols are not lightweight Strings
+### Символы - это не "легковесные" строки
 
-Many Ruby newbies struggle with understanding what Symbols are, and what
-they can be used for.
+Многие начинающие натыкаются на проблемы понимания, что такое "символ" в Ruby, и
+для чего он предназначен.
 
-Symbols can best be described as identities. A symbol is all about
-**who** it is, not **what** it is. Fire up `irb` and see the difference:
+Символы лучше всего сравнить с уникальными идентификаторами. Символ это скорее сам
+знак, а не то, что он означает. Запустите `irb`, чтобы почувствовать разницу:
 
 {% highlight ruby %}
 irb(main):001:0> :george.object_id == :george.object_id
@@ -85,30 +82,29 @@ irb(main):002:0> "george".object_id == "george".object_id
 irb(main):003:0>
 {% endhighlight %}
 
-The `object_id` methods returns the identity of an Object. If two
-objects have the same `object_id`, they are the same (point to the same
-Object in memory).
+Метод `object_id` возвращает уникальный идентификатор объекта. Если два объекта
+имеют одинаковый `object_id`, то это один и тот же объект (указатель на один
+объект в памяти).
 
-As you can see, once you have used a Symbol once, any Symbol with the
-same characters references the same Object in memory. For any given two
-Symbols that represent the same characters, the `object_id`s match.
+Как вы видите, как только вы используете символ, любой другой символ, идентичный
+по написанию с первым, будет обращаться к тому же объекту в памяти.  У всех
+"символов" с одинаковым набором букв (с одним именем) один и тот же `object_id`.
 
-Now take a look at the String (“george”). The `object_id`s don’t match.
-That means they’re referencing two different objects in memory. Whenever
-you use a new String, Ruby allocates memory for it.
+Теперь взглянем на строки. Их `object_id` не совпадает. Это означает, что это
+два разных объекта в памяти. При создании строки Ruby всегда выделяет память для
+нее.
 
-If you’re in doubt whether to use a Symbol or a String, consider what’s
-more important: the identity of an object (i.e. a Hash key), or the
-contents (in the example above, “george”).
+Если вы сомневаетесь, что использовать - символ или строку - задумайтесь, что
+важнее: уникальность объекта (например, для ключа в хеше) или содержание (как в
+примере выше - "george")
 
-### Everything is an Object
+### Все является объектом
 
-“Everything is an object” isn’t just hyperbole. Even classes and
-integers are objects, and you can do the same things with them as with
-any other object:
+"Все - это объект" - не преувеличение. Даже классы и числа, и с ними можно делать
+то, что и с обычными объектами:
 
 {% highlight ruby %}
-# This is the same as
+# То же самое, что и
 # class MyClass
 #   attr_accessor :instance_var
 # end
@@ -117,21 +113,20 @@ MyClass = Class.new do
 end
 {% endhighlight %}
 
-### Variable Constants
+### Изменяемые константы
 
-Constants are not really constant. If you modify an already initialized
-constant, it will trigger a warning, but not halt your program. That
-isn’t to say you **should** redefine constants, though.
+Константы на самом деле не константы. Если вы поменяете значение константы, это
+выдаст предупреждение, но не остановит программу. Однако это **не говорит** о том, что
+вы **должны** переопределять константы.
 
-### Naming conventions
+### Соглашение о наименовании
 
-Ruby enforces some naming conventions. If an identifier starts with a
-capital letter, it is a constant. If it starts with a dollar sign ($),
-it is a global variable. If it starts with `@`, it is an instance
-variable. If it starts with `@@`, it is a class variable.
+Ruby диктует некоторые правила о наименовании. Константы начинаются с заглавной
+буквы. Глобальные переменные начинаются со знака $. Переменные экземпляра
+начинаются с `@`. Переменные класса начинаются с `@@`.
 
-Method names, however, are allowed to start with capital letters. This
-can lead to confusion, as the example below shows:
+Имена методов могут начинаться с заглавных букв, однако это может запутать,
+например:
 
 {% highlight ruby %}
 Constant = 10
@@ -140,12 +135,11 @@ def Constant
 end
 {% endhighlight %}
 
-Now `Constant` is 10, but `Constant()` is 11.
+Значение `Constant` - 10, а `Constant()` - 11.
 
-### Keyword arguments
+### Именованные параметры
 
-Like in Python, since Ruby 2.0 methods can be defined
-using keyword arguments:
+Как и в Python, начиная с версии 2.0 Ruby методы принимают именованые параметры.
 
 {% highlight ruby %}
 def deliver(from: 'A', to: nil, via: 'mail')
@@ -158,37 +152,37 @@ deliver(via: 'Pony Express', from: 'B', to: 'A')
 # => "Sending from B to A via Pony Express."
 {% endhighlight %}
 
-### The universal truth
+### "Истинное" Ruby
 
-In Ruby, everything except **nil** and **false** is considered true. In
-C, Python and many other languages, 0 and possibly other values, such as
-empty lists, are consided false. Take a look at the following Python
-code (the example applies to other languages, too):
+В Ruby все кроме **nil** и **false** рассматриваются как истина. В С, Python и
+многих других языках 0 и некоторые другие значения, например пустой список,
+являются ложью. Взгляните на следующий код Python (пример применим и у другим
+языкам):
 
 {% highlight python %}
-# in Python
+# Python
 if 0:
-  print "0 is true"
+  print "0 - истина"
 else:
-  print "0 is false"
+  print "0 - ложь"
 {% endhighlight %}
 
-This will print “0 is false”. The equivalent Ruby:
+Это выведет на экран “0 - ложь”. Эквивалент на Ruby:
 
 {% highlight ruby %}
-# in Ruby
+# Ruby
 if 0
-  puts "0 is true"
+  puts "0 - истина"
 else
-  puts "0 is false"
+  puts "0 - ложь"
 end
 {% endhighlight %}
 
-Prints “0 is true”.
+Выведет на экран “0 - истина”.
 
-### Access modifiers apply until the end of scope
+### Модификаторы доступа действуют до конца контекста
 
-In the following Ruby code,
+В следующем Ruby коде
 
 {% highlight ruby %}
 class MyClass
@@ -198,44 +192,45 @@ class MyClass
 end
 {% endhighlight %}
 
-You might expect `another_method` to be public. Not so. The ‘private’
-access modifier continues until the end of the scope, or until another
-access modifier pops up, whichever comes first. By default, methods are
-public:
+можно подумать, что `another_method` публичный. Нет, это не так. Модификатор
+доступа 'private' действует до конца контекста, или до другого модификатора
+доступа. По умолчанию все методы публичны.
 
 {% highlight ruby %}
 class MyClass
-  # Now a_method is public
+  # a_method публичный
   def a_method; true; end
 
   private
 
-  # another_method is private
+  # another_method приватный
   def another_method; false; end
 end
 {% endhighlight %}
 
-`public`, `private` and `protected` are really methods, so they can take parameters. If you pass a Symbol to one of them, that method’s visibility is altered.
+`public`, `private` и `protected` на самом деле методы, и они могут принимать
+параметры. Можно передать им имена методов как символы, чтобы поменять область
+доступа метода.
 
-### Method access
+### Вызов методов
 
-In Java, `public` means a method is accessible by anyone. `protected`
-means the class’s instances, instances of descendant classes, and
-instances of classes in the same package can access it, but not anyone
-else, and `private` means nobody besides the classes instances can
-access the method.
+В Java `public` означает, что метод можно вызвать везде. `protected` методы можно
+вызвать только инстансами этого класса, инстансами дочернего класса и инстансами
+класса в этом же пакете. `private` методы не может вызвать никто кроме инстанса
+класса.
 
-Ruby differs slightly. `public` is, naturally, public. `private` means
-the method(s) are accessible only when they can be called without an
-explicit receiver. Only **self** is allowed to be the receiver of a
-private method call.
+В Ruby все немного по-другому. `public` методы на самом деле публичные. `private`
+метод может быть вызван только без явного объявления вызывающей стороны.
+Только **self** может быть вызывающей стороной приватного метода.
 
-`protected` is the one to be on the lookout for. A protected method can be called from a class or descendant class instances, but also with another instance as its receiver. Example, adapted from the [Ruby FAQ][1]\:
+О `protected` методах надо поговорить подробнее. Protected метод может быть вызван
+инстнансом текущего или дочернего класса, однако может иметь вызывающей стороной
+другой инстанс. Пример, позаимствованный из [Ruby FAQ][1]\:
 
 {% highlight ruby %}
 $ irb
 irb(main):001:0> class Test
-irb(main):002:1>   # public by default
+irb(main):002:1>   # публичный метод по умолчанию
 irb(main):003:1*   def func
 irb(main):004:2>     99
 irb(main):005:2>   end
@@ -252,55 +247,63 @@ irb(main):013:0> t2 = Test.new
 => #<Test:0x342784>
 irb(main):014:0> t1 == t2
 => true
-irb(main):015:0> # now make `func` protected, still works
-irb(main):016:0* # because protected allows the other reference
+irb(main):015:0> # сделаем `func` protected методом
+irb(main):016:0* # это возможно, потому что можно вызвать метод у объекта other
 irb(main):017:0* class Test
 irb(main):018:1>   protected :func
 irb(main):019:1> end
 => Test
 irb(main):020:0> t1 == t2
 => true
-irb(main):021:0> # now make `func` private
+irb(main):021:0> # теперь сделаем `func` приватным
 irb(main):022:0* class Test
 irb(main):023:1>   private :func
 irb(main):024:1> end
 => Test
 irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
+NoMethodError: private method `func` called for #<Test:0x342784>
+        from (irb):8:in '=='
         from (irb):25
         from :0
 irb(main):026:0>
 {% endhighlight %}
 
-### Classes are open
+### Открытые классы
 
-Ruby classes are open. You can open them up, add to them, and change them at any time. Even core classes, like `Fixnum` or even `Object`, the parent of all objects. Ruby on Rails defines a bunch of methods for dealing with time on `Fixnum`. Watch:
+Классы в Ruby "открыты". То есть, вы можете открыть их и добавить или изменить их
+в любое время. Даже базовые классы, такие как `Fixnum` или `Object`, родительский
+для всех объектов. Ruby on Rails определяет несколько методов на `Fixnum`, чтобы
+работать со временем. Смотрите:
 
 {% highlight ruby %}
 class Fixnum
   def hours
-    self * 3600 # number of seconds in an hour
+    self * 3600 # число секунд в 1 часе
   end
   alias hour hours
 end
 
-# 14 hours from 00:00 January 1st
-# (aka when you finally wake up ;)
-Time.mktime(2006, 01, 01) + 14.hours # => Sun Jan 01 14:00:00
+# 14 часов после 00:00, 1 января
+# (когда все только-только просыпаются ;)
+Time.mktime(2006, 01, 01) + 14.hours
+# => Sun Jan 01 14:00:00
 {% endhighlight %}
 
-### Funny method names
+### Прикольные имена методов
 
-In Ruby, methods are allowed to end with question marks or exclamation marks. By convention, methods that answer questions (i.e. <tt>Array#empty?</tt> returns **true** if the receiver is empty) end in question marks. Potentially “dangerous” methods (ie methods that modify **self** or the arguments, `exit!` etc.) by convention end with exclamation marks. All methods that change their arguments don’t end with exclamation
-marks, though. <tt>Array#replace</tt> replaces the contents of an array
-with the contents of another array. It doesn’t make much sense to have a
-method like that that **doesn’t** modify self.
+В Ruby имена методов могут оканчиваться на вопросительный или восклицательный
+знаки. По соглашению методы, которые отвечают на вопрос, заканчиваются вопросительным
+знаком (например, <tt>Array#empty?</tt> возвращает **true** если массив пустой).
+Некоторые, "потенциально опасные" методы (которые меняют вызывающую сторонy, **self**
+или параметры) заканчиваются восклицательным знаком (например, `exit!`). Однако не
+все методы, которые меняют агрументы заканчиваются так, например <tt>Array#replace</tt>
+заменяет содержимое массива переданным мессивом. Просто нет смысла иметь метод,
+который бы не менял исходный массив в этом случае.
 
-### Singleton methods
+### Singleton методы
 
-Singleton methods are per-object methods. They are only available on the
-Object you defined it on.
+Singleton методы - это методы, определенные на единственном инстансе и доступные
+только на нем.
 
 {% highlight ruby %}
 class Car
@@ -317,104 +320,106 @@ end
 
 porsche.inspect # => Expensive car
 
-# Other objects are not affected
+# Другие объекты не изменяют поведение
 other_car = Car.new
 other_car.inspect # => Cheap car
 {% endhighlight %}
 
-### Missing methods
+### "Пропавшие" методы
 
-Ruby doesn’t give up if it can’t find a method that responds to a
-particular message. It calls the `method_missing` method with the name
-of the method it couldn’t find and the arguments. By default,
-method\_missing raises a NameError exception, but you can redefine it to
-better fit your application, and many libraries do. Here is an example:
+Ruby не сдается, если не находит вызванный метод, а вызывает метод `method_missing`,
+передав ему имя "потерянного" метода и аргументы. По умолчанию method\_missing
+вызывает исключение NameError, но вы можете переопределить его по вашим потребностям,
+что и делает множество библиотек, например:
 
 {% highlight ruby %}
-# id is the name of the method called, the * syntax collects
-# all the arguments in an array named 'arguments'
+# id - имя вызванного метода, *arguments - такой синтаксис
+# передает все агрументы в функцию как массив 'arguments'
 def method_missing( id, *arguments )
-  puts "Method #{id} was called, but not found. It has " +
-       "these arguments: #{arguments.join(", ")}"
+  puts "Метод #{id} был вызван, но не найден." +
+       "Его аргументы: #{arguments.join(", ")}"
 end
 
 __ :a, :b, 10
-# => Method __ was called, but not found. It has these
-# arguments: a, b, 10
+# => Метод __ был вызван, но не найден.
+# Его аргументы: a, b, 10
 {% endhighlight %}
 
-The code above just prints the details of the call, but you are free to
-handle the message in any way that is appropriate.
+Пример выше просто выводит на экран детали вызова метода, но вы можете сделать
+что-то полезное по вашему усмотрению.
 
-### Message passing, not function calls
+### Передача сообщений, а не вызов функций
 
-A method call is really a **message** to another object:
+На самом деле вызов метода - это передача (send) ему сообщения. Наглядно:
 
 {% highlight ruby %}
-# This
+# Это
 1 + 2
-# Is the same as this ...
+# то же самое, что и ...
 1.+(2)
-# Which is the same as this:
+# и то же самое, что и:
 1.send "+", 2
 {% endhighlight %}
 
-### Blocks are Objects, they just don’t know it yet
+### Блоки - тоже объекты, только они об этом еще не знают
 
-Blocks (closures, really) are heavily used by the standard library. To
-call a block, you can either use `yield`, or make it a `Proc` by
-appending a special argument to the argument list, like so:
+Блоки (на самом деле - замыкания) часто используются в стандартной библиотеке.
+Чтобы вызвать блок можно либо использовать `yield`, либо сделать его объектом
+класса `Proc`, прибавив специальный агрумент к списку аргументов, например так:
 
 {% highlight ruby %}
 def block( &the_block )
-  # Inside here, the_block is the block passed to the method
-  the_block # return the block
+  # Тут the_block это блок, переданный методу
+  the_block # вернет блок (как объект)
 end
 adder = block { |a, b| a + b }
-# adder is now a Proc object
+# adder - это объект класса Proc
 adder.class # => Proc
 {% endhighlight %}
 
-You can create blocks outside of method calls, too, by calling Proc.new
-with a block or calling the `lambda` method.
+Вы можете создавать блоки-объекты также через Proc.new с блоком или вызывая
+`lambda` метод.
 
-Similarly, methods are also Objects in the making:
+В принципе, методы - это тоже объекты:
 
 {% highlight ruby %}
 method(:puts).call "puts is an object!"
 # => puts is an object!
 {% endhighlight %}
 
-### Operators are syntactic sugar
+### Операторы - это синтаксический сахар
 
-Most operators in Ruby are just syntactic sugar (with some precedence
-rules) for method calls. You can, for example, override Fixnums +
-method:
+Большинство операторов в Ruby - это просто синтаксический сахар (с учетом некоторых
+правил) для вызова методов. Например, можно переопределить `+` метод для класса
+`Fixnum`:
 
 {% highlight ruby %}
 class Fixnum
-  # You can, but please don't do this
+  # Так можно, но не значит, что нужно ;)
   def +( other )
     self - other
   end
 end
 {% endhighlight %}
 
-You don’t need C++’s `operator+`, etc.
+Так что вам не потреюуется `operator+` из С++, и т.д.
 
-You can even have array-style access if you define the `[]` and `[]=` methods. To define the unary + and – (think +1 and -2), you must define the `+@` and `-@` methods, respectively. The operators below are **not** syntactic sugar, though. They are not
-methods, and cannot be redefined:
+А еще можно симулировать обращения к объекту как к массиву с помощью методов `[]` и
+`[]=`. Можно определить унарные операторы + и - (например +1 или -2) методами `+@`
+и `-@` соответственно. Операторы ниже, однако, не являются синтаксическим сахаром.
+Они не являются методами и не могут быть переопределены:
 
 {% highlight ruby %}
 =, .., ..., !, not, &&, and, ||, or, !=, !~, ::
 {% endhighlight %}
 
-In addition, +=, \*= etc. are just abbrevations for `var = var + other_var`, `var = var * other_var`, etc. and therefore cannot be redefined.
+В дополнение к этому, +=, \*= и т.д. - это всего лишь сокращения для `var = var + other_var`,
+`var = var * other_var` и т.д. и, соответственно, не могут быть переопределены.
 
-## Finding Out More
+## Узнать больше
 
-When you are ready for more Ruby knowledge, see our
-[Documentation](/en/documentation/) section.
+Если вам хочется узать о Ruby больше - перейдите к
+[документации](/ru/documentation/).
 
 
 

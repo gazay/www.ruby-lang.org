@@ -1,74 +1,60 @@
 ---
 layout: page
-title: "To Ruby From Python"
+title: "В Ruby из Python
 lang: en
 ---
 
-Python is another very nice general purpose programming language. Going
-from Python to Ruby, you’ll find that there’s a little bit more syntax
-to learn than with Python.
+Python - еще один прекрасный язык общего назначения. Переходя в Ruby из Python,
+вам понадобится запомнить чуть больше синтаксических особенностей.
 
-### Similarities
+### Сходства
 
-As with Python, in Ruby,...
+Как и в Python...
 
-* There’s an interactive prompt (called `irb`).
-* You can read docs on the command line (with the `ri` command instead
-  of `pydoc`).
-* There are no special line terminators (except the usual newline).
-* String literals can span multiple lines like Python’s triple-quoted
-  strings.
-* Brackets are for lists, and braces are for dicts (which, in Ruby, are
-  called “hashes”).
-* Arrays work the same (adding them makes one long array, but composing
-  them like this `a3 = [ a1, a2 ]` gives you an array of arrays).
-* Objects are strongly and dynamically typed.
-* Everything is an object, and variables are just references to objects.
-* Although the keywords are a bit different, exceptions work about the
-  same.
-* You’ve got embedded doc tools (Ruby’s is called rdoc).
+* тут есть интерактивная оболочка (вызываемая `irb`).
+* документацию можно увидеть из консоли (с помощью комманды `ri` вместо `pydoc`).
+* нет символа, означающего конец строки (кроме самого перевода строки).
+* строки могут быть расположены на нескольких строках кода (как забранные в тройные
+  кавычки).
+* квадратные скобки обозначают список, фигурные - словарь (в Ruby принято называть
+  "хеш" - "hash").
+* массивы ведут себя точно так же (сложение дает один большой массив, сочетание,
+  например, `a3 = [ a1, a2 ]` дает массив массивов).
+* тут тоже строгая динамическая типизация.
+* все - объект, а переменные - ссылки на объекты.
+* ключевые слова немного отличаются, работа с исключениями почти такая же
+* имеется встроенная утилита для документации (`rdoc`)
 
-### Differences
+### Отличия
 
-Unlike Python, in Ruby,...
+В отличии от Python в Ruby...
 
-* Strings are mutable.
-* You can make constants (variables whose value you don’t intend to
-  change).
-* There are some enforced case-conventions (ex. class names start with a
-  capital letter, variables start with a lowercase letter).
-* There’s only one kind of list container (an Array), and it’s mutable.
-* Double-quoted strings allow escape sequences (like \\t) and a special
-  “expression substitution” syntax (which allows you to insert the
-  results of Ruby expressions directly into other strings without having
-  to `"add " + "strings " + "together"`). Single-quoted strings are like
-  Python’s `r"raw strings"`.
-* There are no “new style” and “old style” classes. Just one kind.
-  (Python 3+ doesn’t have this issue, but it isn’t fully backward
-  compatible with Python 2.)
-* You never directly access attributes. With Ruby, it’s all method
-  calls.
-* Parentheses for method calls are usually optional.
-* There’s `public`, `private`, and `protected` to enforce access,
-  instead of Python’s `_voluntary_` underscore `__convention__`.
-* “mixin’s” are used instead of multiple inheritance.
-* You can add or modify the methods of built-in classes. Both languages
-  let you open up and modify classes at any point, but Python prevents
-  modification of built-ins — Ruby does not.
-* You’ve got `true` and `false` instead of `True` and `False` (and `nil`
-  instead of `None`).
-* When tested for truth, only `false` and `nil` evaluate to a false
-  value. Everything else is true (including `0`, `0.0`, `""`, and `[]`).
-* It’s `elsif` instead of `elif`.
-* It’s `require` instead of `import`. Otherwise though, usage is the
-  same.
-* The usual-style comments on the line(s) *above* things (instead of
-  docstrings below them) are used for generating docs.
-* There are a number of shortcuts that, although give you more to
-  remember, you quickly learn. They tend to make Ruby fun and very
-  productive.
-* There’s no way to unset a variable once set (like Python’s `del`
-  statement). You can reset a variable to `nil`, allowing the old
-  contents to be garbage collected, but the variable will remain in the
-  symbol table as long as it is in scope.
-
+* строки мутабельны
+* имеются константы (переменные, значение которых не должно меняться)
+* есть несколько требований к регистру букв (имена классов начинаются с заглавной
+  буквы, переменные - со строчной)
+* есть только один тип для списка (`Array`), он мутабелен.
+* двойные кавычки используются для интерполирования строк, чтобы включать в строку
+  Ruby выражение вместо `"сложения " + "строк"`), одинарный кавычки похожи на строки
+  `r"raw string"`.
+* нет "новых" и "старых" классов, просто класс (как в Python 3, где это исправлено,
+  но который не полностью совместим с Python 2.*).
+* отстутствует прямой доступ к аттрибутам - в Ruby это всегда будет вызовом метода.
+* необязательно писать скобки при вызове методов
+* есть разграничение видимости методов на `public`, `private` и `protected` вместо
+  `_этих_` `__подчеркиваний__`.
+* для множественного наследования используются премеси ("mixin")
+* можно расширять и изменять базовые классы - оба языка позволяют это для обычных
+  классов в любое время, но Python ограничивает это в случае с базовыми классами.
+* вместо `True` используется `true`, вместо `False` - `false`, вместо `None` - `nil`
+* в тестах на истинность люжью являются только `false` и `nil`, все остальное -
+  истина (включая `0`, `0.0`, `""`, и `[]`).
+* вместо `elif` пишется `elsif`
+* вместо `import` используется `require`, но само использование такое же
+* комментарии располагаются *над* строчкой (а не под строчкой как doc-string), они
+  же используются для автоматически генерируемой документации.
+* есть несколько сокращений, которые стоит запомнить, но именно это и превращает
+  написание кода на Ruby в увлекательное занятие и способствует продуктивности.
+* нет способа разыменовать переменную, созданную однажды (как `del` в Python), но
+  можно присвоить ей значение `nil` - тогда значение будет собрано сборщиком мусора,
+  но переменная все равно останется в текущей области видимости.
