@@ -1,66 +1,58 @@
 ---
 layout: page
-title: "To Ruby From Perl"
-lang: en
+title: "В Ruby из Perl"
+lang: ru
 ---
 
-Perl is awesome. Perl’s docs are awesome. The Perl community is …
-awesome. However, the language is fairly large and arguably complex. For
-those Perlers who long for a simpler time, a more orthogonal language,
-and elegant OO features built-in from the beginning, Ruby may be for
-you.
+Perl прекрасен. Документация Perl'а прекрасна. Коммьюнити Perl ...прекрасно.
+Однако, сам язык довольно обширен и сложен. Ruby подойдет тем пользователям Perl,
+которые хотели бы более простого временами, более ортогонального языка с
+объектно-ориентированной парадигмой, вписанной в язык с рождения.
 
-### Similarities
+### Сходства
 
-As with Perl, in Ruby,...
+Как и в Perl, в Ruby...
 
-* You’ve got a package management system, somewhat like CPAN (though
-  it’s called [RubyGems][1])
-* Regexes are built right in. Bon appétit!
-* There’s a fairly large number of commonly-used built-ins.
-* Parentheses are often optional
-* Strings work basically the same.
-* There’s a general delimited string and regex quoting syntax similar to
-  Perl’s (looks like `%q{this (single-quoted)}`, or `%Q{this
-  (double-quotish)}`, and `%w{this for a single-quoted list of words}`.
-  You `%Q|can|` `%Q(use)` `%Q^other^` delimiters if you like).
-* You’ve got double-quotish variable interpolation, though it `"looks
-  #{like} this"` (and you can put any Ruby code you like inside that
-  `#{}`).
-* Shell command expansion uses \`backticks\`.
-* You’ve got embedded doc tools (Ruby’s is called rdoc).
+* имеется система пакетов, похожая на CPAN, называемая [RubyGems][1].
+* настоящие, вкусные регулярные выражения, приятного аппетита!
+* большое количество широко используемых встроенных инструментов.
+* скобки зачастую необязательны.
+* строки работают практически также.
+* квотирование строк и регулярных выражений похожее (например
+  `%q{одинарные кавычки}`, или `%Q{двойные кавычки}`, `%w{или такой список слов в
+  одинарных кавычках}`. Можно `%Q|использовать|` `%Q(другие)` `%Q^символы^`.
+* строки в двойных кавычках интерполируются, хотя это `"выглядит
+  #{вот} так"` (в `#{}` может быть любой Ruby код).
+* для вызова комманды оболочки используются \`обратные кавычки\`.
+* есть встроенное средство документации (rdoc).
 
-### Differences
+### Отличия
 
-Unlike Perl, in Ruby,...
+В Ruby в отличие от Perl...
 
-* You don’t have the context-dependent rules like with Perl.
-* A variable isn’t the same as the object to which it refers. Instead,
-  it’s always just a reference to an object.
-* Although `$` and <tt>@</tt> are used as the first character in
-  variable names sometimes, rather than indicating type, they indicate
-  scope (`$` for globals, <tt>@</tt> for object instance, and
-  <tt>@@</tt> for class attributes).
-* Array literals go in brackets instead of parentheses.
-* Composing lists of other lists does not flatten them into one big
-  list. Instead you get an array of arrays.
-* It’s `def` instead of `sub`.
-* There’s no semicolons needed at the end of each line. Incidentally,
-  you end things like function definitions, class definitions, and case
-  statements with the `end` keyword.
-* Objects are strongly typed. You’ll be manually calling `foo.to_i`,
-  `foo.to_s`, etc., if you need to convert between types.
-* There’s no `eq`, `ne`, `lt`, `gt`, `ge`, nor `le`.
-* There’s no diamond operator. You usually use <tt>IO.*some\_func*</tt>
-  instead.
-* The fat comma is only used for hash literals.
-* There’s no `undef`. In Ruby you have `nil`. `nil` is an object (like
-  anything else in Ruby). It’s not the same as an undefined variable. It
-  evaluates to `false` if you treat it like a boolean.
-* When tested for truth, only `false` and `nil` evaluate to a false
-  value. Everything else is true (including `0`, `0.0`, and `"0"`).
-* There’s no [PerlMonks][2]. Though the ruby-talk mailing list is a very
-  helpful place.
+* нет контекстно-зависимых правил.
+* переменная и объект, на который она ссылается - не одно и то же, это всегда просто
+  ссылка.
+* хотя `$` и <tt>@</tt> используются в именах переменных в качестве первого символа,
+  они обозначают не тип, а область видимости (`$` для глобальных, <tt>@</tt> - для
+  переменных объекта, а <tt>@@</tt> - для переменных класса).
+* массив заключается в `[]`, а не `()`.
+* сочетание массивов не приводит к их сложению в один массив, а возвращает массив
+  массивов.
+* вместо `sub` пишется `def`.
+* нет необходимости в точке в запятой в конце строки - определения функций, классов
+  и ветвления заканчиваются ключевым словом `end`.
+* объекты строго типизированы - надо руками вызывать `foo.to_i`, `foo.to_s` и т.д.,
+  если надо преобразовывать типы.
+* нет `eq`, `ne`, `lt`, `gt`, `le`.
+* нет `<>` ("diamond operator") - используется <tt>IO.*some\_func*</tt>.
+* `=>` ("fat comma") используется только в определениях хешей.
+* нет `undef` - есть `nil` и это объект (как и все в Ruby), но присвоить переменной
+  значение `nil` - не значит "унижтожить" ее.
+* В тестах на истинность только `false` и `nil` - это ложь. Все остальное (включая
+  `0`, `0.0` и `"0"`) - истина.
+* нет экививалента [PerlMonks][2]. Однако, список рассылки ruby-talk вполне может
+  помочь.
 
 
 
